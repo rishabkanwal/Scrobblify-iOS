@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11059CA31EED422D00E62F27 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C991EED422D00E62F27 /* Configuration.swift */; };
+		11059CA41EED422D00E62F27 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9A1EED422D00E62F27 /* DateFormatter.swift */; };
+		11059CA51EED422D00E62F27 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9B1EED422D00E62F27 /* LastFmRequest.swift */; };
+		11059CA61EED422D00E62F27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9C1EED422D00E62F27 /* LoginViewController.swift */; };
+		11059CA71EED422D00E62F27 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9D1EED422D00E62F27 /* RecentsViewController.swift */; };
+		11059CA81EED422D00E62F27 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9E1EED422D00E62F27 /* RecentTrack.swift */; };
+		11059CA91EED422D00E62F27 /* RecentTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */; };
+		11059CAA1EED422D00E62F27 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA01EED422D00E62F27 /* Session.swift */; };
+		11059CAB1EED422D00E62F27 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA11EED422D00E62F27 /* SplashViewController.swift */; };
+		11059CAC1EED422D00E62F27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA21EED422D00E62F27 /* User.swift */; };
 		113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA11EED418C009A9E2E /* AppDelegate.swift */; };
 		113E6DA41EED418C009A9E2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA31EED418C009A9E2E /* FirstViewController.swift */; };
 		113E6DA61EED418C009A9E2E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA51EED418C009A9E2E /* SecondViewController.swift */; };
@@ -15,6 +25,9 @@
 		113E6DAE1EED418C009A9E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113E6DAC1EED418C009A9E2E /* LaunchScreen.storyboard */; };
 		113E6DB91EED418C009A9E2E /* ScrobblifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */; };
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
+		4F3BA3502D3AA595F53EA9AF /* Pods_ScrobblifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */; };
+		AAB4971AF5916B617A2291BF /* Pods_Scrobblify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */; };
+		BED1EFF29515A8F37F7A6885 /* Pods_ScrobblifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11059C991EED422D00E62F27 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		11059C9A1EED422D00E62F27 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		11059C9B1EED422D00E62F27 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFmRequest.swift; sourceTree = "<group>"; };
+		11059C9C1EED422D00E62F27 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11059C9D1EED422D00E62F27 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
+		11059C9E1EED422D00E62F27 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTrack.swift; sourceTree = "<group>"; };
+		11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTrackTableViewCell.swift; sourceTree = "<group>"; };
+		11059CA01EED422D00E62F27 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		11059CA11EED422D00E62F27 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		11059CA21EED422D00E62F27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		113E6D9E1EED418C009A9E2E /* Scrobblify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrobblify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DA11EED418C009A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		113E6DA31EED418C009A9E2E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +73,14 @@
 		113E6DBF1EED418C009A9E2E /* ScrobblifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrobblifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyUITests.swift; sourceTree = "<group>"; };
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrobblifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrobblify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrobblify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scrobblify/Pods-Scrobblify.release.xcconfig"; sourceTree = "<group>"; };
+		6FA7DA4065DD93034C94E39C /* Pods-Scrobblify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrobblify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scrobblify/Pods-Scrobblify.debug.xcconfig"; sourceTree = "<group>"; };
+		7F6F7061BD537898769B26C8 /* Pods-ScrobblifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyTests/Pods-ScrobblifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrobblifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA0E9C9A9E02ED10B9B3DED /* Pods-ScrobblifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9CE104038BC6270A133FD99 /* Pods-ScrobblifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyTests/Pods-ScrobblifyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB4971AF5916B617A2291BF /* Pods_Scrobblify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED1EFF29515A8F37F7A6885 /* Pods_ScrobblifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3BA3502D3AA595F53EA9AF /* Pods_ScrobblifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +118,8 @@
 				113E6DB71EED418C009A9E2E /* ScrobblifyTests */,
 				113E6DC21EED418C009A9E2E /* ScrobblifyUITests */,
 				113E6D9F1EED418C009A9E2E /* Products */,
+				9C8B6707B5706CB3CF25A0A8 /* Pods */,
+				5EB06B3CB4B7AA371F12DC51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +136,16 @@
 		113E6DA01EED418C009A9E2E /* Scrobblify */ = {
 			isa = PBXGroup;
 			children = (
+				11059C991EED422D00E62F27 /* Configuration.swift */,
+				11059C9A1EED422D00E62F27 /* DateFormatter.swift */,
+				11059C9B1EED422D00E62F27 /* LastFmRequest.swift */,
+				11059C9C1EED422D00E62F27 /* LoginViewController.swift */,
+				11059C9D1EED422D00E62F27 /* RecentsViewController.swift */,
+				11059C9E1EED422D00E62F27 /* RecentTrack.swift */,
+				11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */,
+				11059CA01EED422D00E62F27 /* Session.swift */,
+				11059CA11EED422D00E62F27 /* SplashViewController.swift */,
+				11059CA21EED422D00E62F27 /* User.swift */,
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
 				113E6DA31EED418C009A9E2E /* FirstViewController.swift */,
 				113E6DA51EED418C009A9E2E /* SecondViewController.swift */,
@@ -128,6 +175,29 @@
 			path = ScrobblifyUITests;
 			sourceTree = "<group>";
 		};
+		5EB06B3CB4B7AA371F12DC51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */,
+				1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */,
+				814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C8B6707B5706CB3CF25A0A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FA7DA4065DD93034C94E39C /* Pods-Scrobblify.debug.xcconfig */,
+				41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */,
+				F9CE104038BC6270A133FD99 /* Pods-ScrobblifyTests.debug.xcconfig */,
+				7F6F7061BD537898769B26C8 /* Pods-ScrobblifyTests.release.xcconfig */,
+				EDA0E9C9A9E02ED10B9B3DED /* Pods-ScrobblifyUITests.debug.xcconfig */,
+				112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113E6DC81EED418C009A9E2E /* Build configuration list for PBXNativeTarget "Scrobblify" */;
 			buildPhases = (
+				056011D5E9A53F9973BC2383 /* [CP] Check Pods Manifest.lock */,
 				113E6D9A1EED418C009A9E2E /* Sources */,
 				113E6D9B1EED418C009A9E2E /* Frameworks */,
 				113E6D9C1EED418C009A9E2E /* Resources */,
+				55D2C5EEEE5D4DAA7ABE15FD /* [CP] Embed Pods Frameworks */,
+				FB06D27C88DCE1E81E4AEF92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113E6DCB1EED418C009A9E2E /* Build configuration list for PBXNativeTarget "ScrobblifyTests" */;
 			buildPhases = (
+				204BD5179264A55C296D037E /* [CP] Check Pods Manifest.lock */,
 				113E6DB01EED418C009A9E2E /* Sources */,
 				113E6DB11EED418C009A9E2E /* Frameworks */,
 				113E6DB21EED418C009A9E2E /* Resources */,
+				2817C4625403FC6B8BB3AAFA /* [CP] Embed Pods Frameworks */,
+				D790DCB2BEAB5912FA8D9A7C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113E6DCE1EED418C009A9E2E /* Build configuration list for PBXNativeTarget "ScrobblifyUITests" */;
 			buildPhases = (
+				7E75E599FEFFDDFADB25E986 /* [CP] Check Pods Manifest.lock */,
 				113E6DBB1EED418C009A9E2E /* Sources */,
 				113E6DBC1EED418C009A9E2E /* Frameworks */,
 				113E6DBD1EED418C009A9E2E /* Resources */,
+				1A1F4B8251D4F94829C61A66 /* [CP] Embed Pods Frameworks */,
+				950829D706FA375EFAC0AA31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,14 +339,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		056011D5E9A53F9973BC2383 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A1F4B8251D4F94829C61A66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		204BD5179264A55C296D037E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2817C4625403FC6B8BB3AAFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrobblifyTests/Pods-ScrobblifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55D2C5EEEE5D4DAA7ABE15FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrobblify/Pods-Scrobblify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E75E599FEFFDDFADB25E986 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		950829D706FA375EFAC0AA31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D790DCB2BEAB5912FA8D9A7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrobblifyTests/Pods-ScrobblifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB06D27C88DCE1E81E4AEF92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrobblify/Pods-Scrobblify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		113E6D9A1EED418C009A9E2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11059CAC1EED422D00E62F27 /* User.swift in Sources */,
+				11059CA61EED422D00E62F27 /* LoginViewController.swift in Sources */,
+				11059CA71EED422D00E62F27 /* RecentsViewController.swift in Sources */,
+				11059CA51EED422D00E62F27 /* LastFmRequest.swift in Sources */,
+				11059CAB1EED422D00E62F27 /* SplashViewController.swift in Sources */,
 				113E6DA61EED418C009A9E2E /* SecondViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
+				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,
+				11059CA91EED422D00E62F27 /* RecentTrackTableViewCell.swift in Sources */,
+				11059CAA1EED422D00E62F27 /* Session.swift in Sources */,
+				11059CA81EED422D00E62F27 /* RecentTrack.swift in Sources */,
 				113E6DA41EED418C009A9E2E /* FirstViewController.swift in Sources */,
+				11059CA41EED422D00E62F27 /* DateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +646,7 @@
 		};
 		113E6DC91EED418C009A9E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA7DA4065DD93034C94E39C /* Pods-Scrobblify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4NLDB2WUE7;
@@ -432,6 +660,7 @@
 		};
 		113E6DCA1EED418C009A9E2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4NLDB2WUE7;
@@ -445,6 +674,7 @@
 		};
 		113E6DCC1EED418C009A9E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9CE104038BC6270A133FD99 /* Pods-ScrobblifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +690,7 @@
 		};
 		113E6DCD1EED418C009A9E2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6F7061BD537898769B26C8 /* Pods-ScrobblifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +706,7 @@
 		};
 		113E6DCF1EED418C009A9E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA0E9C9A9E02ED10B9B3DED /* Pods-ScrobblifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4NLDB2WUE7;
@@ -489,6 +721,7 @@
 		};
 		113E6DD01EED418C009A9E2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4NLDB2WUE7;
@@ -520,6 +753,7 @@
 				113E6DCA1EED418C009A9E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		113E6DCB1EED418C009A9E2E /* Build configuration list for PBXNativeTarget "ScrobblifyTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +762,7 @@
 				113E6DCD1EED418C009A9E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		113E6DCE1EED418C009A9E2E /* Build configuration list for PBXNativeTarget "ScrobblifyUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +771,7 @@
 				113E6DD01EED418C009A9E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
