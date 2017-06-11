@@ -6,6 +6,14 @@ target 'Scrobblify' do
   use_frameworks!
 
   # Pods for Scrobblify
+  pod 'Alamofire', '~> 4.4'
+  pod 'CryptoSwift'
+  pod 'Kingfisher', '~> 3.0'
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'RxCocoa',    '~> 3.0'
+  pod 'RxSwift',    '~> 3.0'
+  pod 'SwiftyJSON'
+  pod 'TTGSnackbar'
 
   target 'ScrobblifyTests' do
     inherit! :search_paths
