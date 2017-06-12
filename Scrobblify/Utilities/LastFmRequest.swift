@@ -83,6 +83,31 @@ class LastFmRequest{
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
     }
     
+    func getTopAlbums(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+        let parameters: Parameters = ["format": "json",
+                                      "method": "user.getTopAlbums",
+                                      "api_key": apiKey,
+                                      "user": AppState.shared.session!.username!,
+                                      "password": "password",
+                                      "limit": 200,
+                                      "page": page,
+                                      "period": timePeriod
+        ]
+        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
+    
+    func getTopTracks(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+        let parameters: Parameters = ["format": "json",
+                                      "method": "user.getTopTracks",
+                                      "api_key": apiKey,
+                                      "user": AppState.shared.session!.username!,
+                                      "password": "password",
+                                      "limit": 200,
+                                      "page": page,
+                                      "period": timePeriod
+        ]
+        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
     
 
     
