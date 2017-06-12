@@ -14,6 +14,7 @@ class LastFmRequest{
     let baseUrl = configuration().baseUrl
     let apiKey = configuration().apiKey
     let sharedSecret = configuration().sharedSecret
+
     
     func getApiSignature(username: String, password: String, method: String) -> String {
             return "api_key\(apiKey)method\(method)password\(password)username\(username)\(sharedSecret)".md5()
@@ -70,9 +71,10 @@ class LastFmRequest{
         
     }
     
-    func getTopArtists(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+    func getTopItem(requestType: String, page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+        
         let parameters: Parameters = ["format": "json",
-                                      "method": "user.getTopArtists",
+                                      "method": requestType,
                                       "api_key": apiKey,
                                       "user": AppState.shared.session!.username!,
                                       "password": "password",
@@ -81,34 +83,22 @@ class LastFmRequest{
                                       "period": timePeriod
         ]
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
+    
+    func getTopArtists(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+        getTopItem(requestType: "user.getTopArtists", page: page, timePeriod: timePeriod, completionHandler: completionHandler)
     }
     
     func getTopAlbums(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
-        let parameters: Parameters = ["format": "json",
-                                      "method": "user.getTopAlbums",
-                                      "api_key": apiKey,
-                                      "user": AppState.shared.session!.username!,
-                                      "password": "password",
-                                      "limit": 200,
-                                      "page": page,
-                                      "period": timePeriod
-        ]
-        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+        getTopItem(requestType: "user.getTopAlbums", page: page, timePeriod: timePeriod, completionHandler: completionHandler)
     }
     
     func getTopTracks(page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
-        let parameters: Parameters = ["format": "json",
-                                      "method": "user.getTopTracks",
-                                      "api_key": apiKey,
-                                      "user": AppState.shared.session!.username!,
-                                      "password": "password",
-                                      "limit": 200,
-                                      "page": page,
-                                      "period": timePeriod
-        ]
-        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+        getTopItem(requestType: "user.getTopTracks", page: page, timePeriod: timePeriod, completionHandler: completionHandler)
+
     }
     
+
 
     
 }

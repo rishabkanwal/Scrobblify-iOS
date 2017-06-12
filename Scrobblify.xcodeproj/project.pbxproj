@@ -21,10 +21,8 @@
 		114764971EEF03B90028936F /* TracksTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764951EEF03B90028936F /* TracksTableViewCells.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
-		11FE1E851EEE2BE4004FFB51 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */; };
 		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
 		11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */; };
-		11FE1E881EEE2BE4004FFB51 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */; };
 		11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */; };
 		11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */; };
 		11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */; };
@@ -79,10 +77,8 @@
 		114764951EEF03B90028936F /* TracksTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksTableViewCells.swift; path = Utilities/TracksTableViewCells.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
-		11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ViewControllers/FirstViewController.swift; sourceTree = "<group>"; };
 		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsViewController.swift; path = ViewControllers/RecentsViewController.swift; sourceTree = "<group>"; };
-		11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ViewControllers/SecondViewController.swift; sourceTree = "<group>"; };
 		11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = ViewControllers/SplashViewController.swift; sourceTree = "<group>"; };
 		11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Utilities/DateFormatter.swift; sourceTree = "<group>"; };
 		11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFmRequest.swift; path = Utilities/LastFmRequest.swift; sourceTree = "<group>"; };
@@ -192,10 +188,8 @@
 				114764921EEF03AC0028936F /* TracksViewController.swift */,
 				11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */,
 				11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */,
-				11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */,
 				11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */,
 				11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */,
-				11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */,
 				11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */,
 			);
 			name = ViewControllers;
@@ -534,9 +528,7 @@
 				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,
 				11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */,
 				1147648F1EEEF5B20028936F /* AlbumsTableViewCells.swift in Sources */,
-				11FE1E881EEE2BE4004FFB51 /* SecondViewController.swift in Sources */,
 				11FE1E981EEE2CAF004FFB51 /* ArtistsTableViewCells.swift in Sources */,
-				11FE1E851EEE2BE4004FFB51 /* FirstViewController.swift in Sources */,
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,
 				11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */,
 				11FE1E961EEE2C53004FFB51 /* User.swift in Sources */,
