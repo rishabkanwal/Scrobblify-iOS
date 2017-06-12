@@ -8,23 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		11059CA31EED422D00E62F27 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C991EED422D00E62F27 /* Configuration.swift */; };
-		11059CA41EED422D00E62F27 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9A1EED422D00E62F27 /* DateFormatter.swift */; };
-		11059CA51EED422D00E62F27 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9B1EED422D00E62F27 /* LastFmRequest.swift */; };
-		11059CA61EED422D00E62F27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9C1EED422D00E62F27 /* LoginViewController.swift */; };
-		11059CA71EED422D00E62F27 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9D1EED422D00E62F27 /* RecentsViewController.swift */; };
-		11059CA81EED422D00E62F27 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9E1EED422D00E62F27 /* RecentTrack.swift */; };
-		11059CA91EED422D00E62F27 /* RecentTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */; };
-		11059CAA1EED422D00E62F27 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA01EED422D00E62F27 /* Session.swift */; };
-		11059CAB1EED422D00E62F27 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA11EED422D00E62F27 /* SplashViewController.swift */; };
-		11059CAC1EED422D00E62F27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059CA21EED422D00E62F27 /* User.swift */; };
+		11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CAD1EED44FF00E62F27 /* Main.storyboard */; };
+		11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CB11EED489200E62F27 /* LaunchScreen.storyboard */; };
 		113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA11EED418C009A9E2E /* AppDelegate.swift */; };
-		113E6DA41EED418C009A9E2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA31EED418C009A9E2E /* FirstViewController.swift */; };
-		113E6DA61EED418C009A9E2E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA51EED418C009A9E2E /* SecondViewController.swift */; };
-		113E6DA91EED418C009A9E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113E6DA71EED418C009A9E2E /* Main.storyboard */; };
 		113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113E6DAA1EED418C009A9E2E /* Assets.xcassets */; };
-		113E6DAE1EED418C009A9E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113E6DAC1EED418C009A9E2E /* LaunchScreen.storyboard */; };
 		113E6DB91EED418C009A9E2E /* ScrobblifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */; };
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
+		1147648F1EEEF5B20028936F /* AlbumsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1147648E1EEEF5B20028936F /* AlbumsTableViewCells.swift */; };
+		114764911EEEF5FD0028936F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764901EEEF5FD0028936F /* Album.swift */; };
+		114764931EEF03AC0028936F /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764921EEF03AC0028936F /* TracksViewController.swift */; };
+		114764961EEF03B90028936F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764941EEF03B90028936F /* Track.swift */; };
+		114764971EEF03B90028936F /* TracksTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764951EEF03B90028936F /* TracksTableViewCells.swift */; };
+		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
+		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
+		11FE1E851EEE2BE4004FFB51 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */; };
+		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
+		11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */; };
+		11FE1E881EEE2BE4004FFB51 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */; };
+		11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */; };
+		11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */; };
+		11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */; };
+		11FE1E931EEE2C53004FFB51 /* RecentsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */; };
+		11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */; };
+		11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8F1EEE2C53004FFB51 /* Session.swift */; };
+		11FE1E961EEE2C53004FFB51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E901EEE2C53004FFB51 /* User.swift */; };
+		11FE1E981EEE2CAF004FFB51 /* ArtistsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E971EEE2CAF004FFB51 /* ArtistsTableViewCells.swift */; };
+		11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E991EEE2D2C004FFB51 /* AppState.swift */; };
+		11FE1E9C1EEE2D2C004FFB51 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E9A1EEE2D2C004FFB51 /* Artist.swift */; };
 		4F3BA3502D3AA595F53EA9AF /* Pods_ScrobblifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */; };
 		AAB4971AF5916B617A2291BF /* Pods_Scrobblify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */; };
 		BED1EFF29515A8F37F7A6885 /* Pods_ScrobblifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */; };
@@ -49,23 +59,12 @@
 
 /* Begin PBXFileReference section */
 		11059C991EED422D00E62F27 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		11059C9A1EED422D00E62F27 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		11059C9B1EED422D00E62F27 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFmRequest.swift; sourceTree = "<group>"; };
-		11059C9C1EED422D00E62F27 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		11059C9D1EED422D00E62F27 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
-		11059C9E1EED422D00E62F27 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTrack.swift; sourceTree = "<group>"; };
-		11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTrackTableViewCell.swift; sourceTree = "<group>"; };
-		11059CA01EED422D00E62F27 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		11059CA11EED422D00E62F27 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		11059CA21EED422D00E62F27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		11059CAD1EED44FF00E62F27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		11059CB11EED489200E62F27 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		113E6D9E1EED418C009A9E2E /* Scrobblify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrobblify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DA11EED418C009A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		113E6DA31EED418C009A9E2E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		113E6DA51EED418C009A9E2E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		113E6DA81EED418C009A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		113E6DAA1EED418C009A9E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		113E6DAD1EED418C009A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113E6DAF1EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		113E6DB41EED418C009A9E2E /* ScrobblifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrobblifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyTests.swift; sourceTree = "<group>"; };
@@ -73,6 +72,27 @@
 		113E6DBF1EED418C009A9E2E /* ScrobblifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrobblifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyUITests.swift; sourceTree = "<group>"; };
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1147648E1EEEF5B20028936F /* AlbumsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsTableViewCells.swift; path = Utilities/AlbumsTableViewCells.swift; sourceTree = "<group>"; };
+		114764901EEEF5FD0028936F /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = Utilities/Album.swift; sourceTree = "<group>"; };
+		114764921EEF03AC0028936F /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksViewController.swift; path = ViewControllers/TracksViewController.swift; sourceTree = "<group>"; };
+		114764941EEF03B90028936F /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Utilities/Track.swift; sourceTree = "<group>"; };
+		114764951EEF03B90028936F /* TracksTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksTableViewCells.swift; path = Utilities/TracksTableViewCells.swift; sourceTree = "<group>"; };
+		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
+		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
+		11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ViewControllers/FirstViewController.swift; sourceTree = "<group>"; };
+		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsViewController.swift; path = ViewControllers/RecentsViewController.swift; sourceTree = "<group>"; };
+		11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ViewControllers/SecondViewController.swift; sourceTree = "<group>"; };
+		11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = ViewControllers/SplashViewController.swift; sourceTree = "<group>"; };
+		11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Utilities/DateFormatter.swift; sourceTree = "<group>"; };
+		11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFmRequest.swift; path = Utilities/LastFmRequest.swift; sourceTree = "<group>"; };
+		11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsTableViewCells.swift; path = Utilities/RecentsTableViewCells.swift; sourceTree = "<group>"; };
+		11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrack.swift; path = Utilities/RecentTrack.swift; sourceTree = "<group>"; };
+		11FE1E8F1EEE2C53004FFB51 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Utilities/Session.swift; sourceTree = "<group>"; };
+		11FE1E901EEE2C53004FFB51 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Utilities/User.swift; sourceTree = "<group>"; };
+		11FE1E971EEE2CAF004FFB51 /* ArtistsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsTableViewCells.swift; path = Utilities/ArtistsTableViewCells.swift; sourceTree = "<group>"; };
+		11FE1E991EEE2D2C004FFB51 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = Utilities/AppState.swift; sourceTree = "<group>"; };
+		11FE1E9A1EEE2D2C004FFB51 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Utilities/Artist.swift; sourceTree = "<group>"; };
 		1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrobblifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrobblify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrobblify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scrobblify/Pods-Scrobblify.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,22 +156,13 @@
 		113E6DA01EED418C009A9E2E /* Scrobblify */ = {
 			isa = PBXGroup;
 			children = (
-				11059C991EED422D00E62F27 /* Configuration.swift */,
-				11059C9A1EED422D00E62F27 /* DateFormatter.swift */,
-				11059C9B1EED422D00E62F27 /* LastFmRequest.swift */,
-				11059C9C1EED422D00E62F27 /* LoginViewController.swift */,
-				11059C9D1EED422D00E62F27 /* RecentsViewController.swift */,
-				11059C9E1EED422D00E62F27 /* RecentTrack.swift */,
-				11059C9F1EED422D00E62F27 /* RecentTrackTableViewCell.swift */,
-				11059CA01EED422D00E62F27 /* Session.swift */,
-				11059CA11EED422D00E62F27 /* SplashViewController.swift */,
-				11059CA21EED422D00E62F27 /* User.swift */,
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
-				113E6DA31EED418C009A9E2E /* FirstViewController.swift */,
-				113E6DA51EED418C009A9E2E /* SecondViewController.swift */,
-				113E6DA71EED418C009A9E2E /* Main.storyboard */,
+				11059C991EED422D00E62F27 /* Configuration.swift */,
+				11FE1E7B1EEE2B03004FFB51 /* ViewControllers */,
+				11FE1E8A1EEE2BEF004FFB51 /* Utilities */,
+				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
+				11059CB11EED489200E62F27 /* LaunchScreen.storyboard */,
 				113E6DAA1EED418C009A9E2E /* Assets.xcassets */,
-				113E6DAC1EED418C009A9E2E /* LaunchScreen.storyboard */,
 				113E6DAF1EED418C009A9E2E /* Info.plist */,
 			);
 			path = Scrobblify;
@@ -173,6 +184,41 @@
 				113E6DC51EED418C009A9E2E /* Info.plist */,
 			);
 			path = ScrobblifyUITests;
+			sourceTree = "<group>";
+		};
+		11FE1E7B1EEE2B03004FFB51 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				114764921EEF03AC0028936F /* TracksViewController.swift */,
+				11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */,
+				11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */,
+				11FE1E7E1EEE2BE4004FFB51 /* FirstViewController.swift */,
+				11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */,
+				11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */,
+				11FE1E811EEE2BE4004FFB51 /* SecondViewController.swift */,
+				11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		11FE1E8A1EEE2BEF004FFB51 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				114764941EEF03B90028936F /* Track.swift */,
+				114764951EEF03B90028936F /* TracksTableViewCells.swift */,
+				114764901EEEF5FD0028936F /* Album.swift */,
+				11FE1E991EEE2D2C004FFB51 /* AppState.swift */,
+				11FE1E9A1EEE2D2C004FFB51 /* Artist.swift */,
+				11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */,
+				11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */,
+				11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */,
+				11FE1E8F1EEE2C53004FFB51 /* Session.swift */,
+				11FE1E901EEE2C53004FFB51 /* User.swift */,
+				1147648E1EEEF5B20028936F /* AlbumsTableViewCells.swift */,
+				11FE1E971EEE2CAF004FFB51 /* ArtistsTableViewCells.swift */,
+				11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		5EB06B3CB4B7AA371F12DC51 /* Frameworks */ = {
@@ -317,9 +363,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				113E6DAE1EED418C009A9E2E /* LaunchScreen.storyboard in Resources */,
+				11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */,
 				113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */,
-				113E6DA91EED418C009A9E2E /* Main.storyboard in Resources */,
+				11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,19 +528,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11059CAC1EED422D00E62F27 /* User.swift in Sources */,
-				11059CA61EED422D00E62F27 /* LoginViewController.swift in Sources */,
-				11059CA71EED422D00E62F27 /* RecentsViewController.swift in Sources */,
-				11059CA51EED422D00E62F27 /* LastFmRequest.swift in Sources */,
-				11059CAB1EED422D00E62F27 /* SplashViewController.swift in Sources */,
-				113E6DA61EED418C009A9E2E /* SecondViewController.swift in Sources */,
+				11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */,
+				114764961EEF03B90028936F /* Track.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
+				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,
+				11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */,
+				1147648F1EEEF5B20028936F /* AlbumsTableViewCells.swift in Sources */,
+				11FE1E881EEE2BE4004FFB51 /* SecondViewController.swift in Sources */,
+				11FE1E981EEE2CAF004FFB51 /* ArtistsTableViewCells.swift in Sources */,
+				11FE1E851EEE2BE4004FFB51 /* FirstViewController.swift in Sources */,
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,
-				11059CA91EED422D00E62F27 /* RecentTrackTableViewCell.swift in Sources */,
-				11059CAA1EED422D00E62F27 /* Session.swift in Sources */,
-				11059CA81EED422D00E62F27 /* RecentTrack.swift in Sources */,
-				113E6DA41EED418C009A9E2E /* FirstViewController.swift in Sources */,
-				11059CA41EED422D00E62F27 /* DateFormatter.swift in Sources */,
+				11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */,
+				11FE1E961EEE2C53004FFB51 /* User.swift in Sources */,
+				11FE1E931EEE2C53004FFB51 /* RecentsTableViewCells.swift in Sources */,
+				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
+				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
+				11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */,
+				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,
+				11FE1E9C1EEE2D2C004FFB51 /* Artist.swift in Sources */,
+				11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */,
+				114764971EEF03B90028936F /* TracksTableViewCells.swift in Sources */,
+				114764931EEF03AC0028936F /* TracksViewController.swift in Sources */,
+				11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */,
+				114764911EEEF5FD0028936F /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,25 +584,6 @@
 			targetProxy = 113E6DC01EED418C009A9E2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		113E6DA71EED418C009A9E2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				113E6DA81EED418C009A9E2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		113E6DAC1EED418C009A9E2E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				113E6DAD1EED418C009A9E2E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		113E6DC61EED418C009A9E2E /* Debug */ = {
