@@ -118,12 +118,12 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         if (indexPath.row < self.artists.count) {
-            let currentArtist = self.artists[indexPath.row]
+            let currentArtist = artists[indexPath.row]
             
-            let artistCell: ArtistTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ArtistTableViewCell", for: indexPath) as! ArtistTableViewCell
+            let artistCell = tableView.dequeueReusableCell(withIdentifier: "ArtistTableViewCell", for: indexPath) as! ArtistTableViewCell
             
+            artistCell.selectionStyle = .none
             artistCell.artImageView.layer.cornerRadius = 4;
-            
             artistCell.nameLabel.text = currentArtist.name!
             artistCell.playsLabel.text = currentArtist.playcount! + " Plays"
             artistCell.rankLabel.text = "#" + currentArtist.rank! + " Most Played"
@@ -136,6 +136,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return artistCell
         } else {
             let loadingCell =  tableView.dequeueReusableCell(withIdentifier: "LoadingArtistsTableViewCell", for: indexPath) as! LoadingArtistsTableViewCell
+            loadingCell.selectionStyle = .none
             loadingCell.loadingActivityIndicator.startAnimating()
             return loadingCell
         }
@@ -146,7 +147,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
         if maximumOffset - currentOffset <= 74 {
-            self.updateArtists(isRefresh: false)
+            updateArtists(isRefresh: false)
         }
     }
     
