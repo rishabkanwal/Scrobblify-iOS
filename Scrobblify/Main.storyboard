@@ -252,8 +252,8 @@
                             <constraint firstItem="PB2-Xr-LuW" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="O5A-aw-vqO"/>
                             <constraint firstItem="6Kh-As-Cz3" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="WmN-VC-Gk3"/>
                             <constraint firstAttribute="trailing" secondItem="s0z-QQ-cdv" secondAttribute="trailing" id="fyF-gS-HFf"/>
+                            <constraint firstItem="PB2-Xr-LuW" firstAttribute="top" secondItem="s0z-QQ-cdv" secondAttribute="bottom" id="iTk-mV-udv"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="PB2-Xr-LuW" secondAttribute="bottom" id="kBn-LK-gy5"/>
-                            <constraint firstItem="PB2-Xr-LuW" firstAttribute="top" secondItem="6Kh-As-Cz3" secondAttribute="bottom" constant="9" id="o3A-yv-ewp"/>
                             <constraint firstAttribute="trailing" secondItem="PB2-Xr-LuW" secondAttribute="trailing" id="xaD-H0-mKa"/>
                         </constraints>
                     </view>
@@ -300,7 +300,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3e0-mX-v3g" userLabel="Albums Table View">
-                                <rect key="frame" x="0.0" y="54" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="45" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumTableViewCell" rowHeight="74" id="O0n-m9-fCI" userLabel="Album Table View Cell" customClass="AlbumTableViewCell" customModule="Scrobblify" customModuleProvider="target">
@@ -388,7 +388,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yqD-Gi-v8I" secondAttribute="trailing" id="2Or-pl-QFt"/>
-                            <constraint firstItem="3e0-mX-v3g" firstAttribute="top" secondItem="yqD-Gi-v8I" secondAttribute="bottom" constant="9" id="EkC-Ph-2AV"/>
+                            <constraint firstItem="3e0-mX-v3g" firstAttribute="top" secondItem="yqD-Gi-v8I" secondAttribute="bottom" id="EkC-Ph-2AV"/>
                             <constraint firstAttribute="trailing" secondItem="3e0-mX-v3g" secondAttribute="trailing" id="TnO-z2-IBA"/>
                             <constraint firstItem="QX5-TM-s24" firstAttribute="top" secondItem="3e0-mX-v3g" secondAttribute="bottom" id="XCI-xL-E3R"/>
                             <constraint firstItem="yqD-Gi-v8I" firstAttribute="leading" secondItem="mKT-Kq-V4h" secondAttribute="leading" id="Zqo-ai-b4W"/>
@@ -716,7 +716,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-Dh-MJi" userLabel="Tracks Table View">
-                                <rect key="frame" x="0.0" y="54" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="45" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="74" id="DVV-jH-oLv" userLabel="Track Table View Cell" customClass="TrackTableViewCell" customModule="Scrobblify" customModuleProvider="target">
@@ -806,7 +806,7 @@
                             <constraint firstItem="7Nj-fb-aeq" firstAttribute="trailing" secondItem="p2B-Ok-mys" secondAttribute="trailingMargin" id="0Bk-GD-DWV"/>
                             <constraint firstItem="o37-k0-4fL" firstAttribute="leading" secondItem="p2B-Ok-mys" secondAttribute="leading" id="6zi-on-ZG2"/>
                             <constraint firstAttribute="trailing" secondItem="EfN-Dh-MJi" secondAttribute="trailing" id="8Go-1s-TxI"/>
-                            <constraint firstItem="EfN-Dh-MJi" firstAttribute="top" secondItem="o37-k0-4fL" secondAttribute="bottom" constant="9" id="8In-jK-8U5"/>
+                            <constraint firstItem="EfN-Dh-MJi" firstAttribute="top" secondItem="o37-k0-4fL" secondAttribute="bottom" id="8In-jK-8U5"/>
                             <constraint firstItem="EfN-Dh-MJi" firstAttribute="leading" secondItem="p2B-Ok-mys" secondAttribute="leading" id="C9X-zm-bKc"/>
                             <constraint firstItem="Q7t-zo-21i" firstAttribute="top" secondItem="EfN-Dh-MJi" secondAttribute="bottom" id="OUW-qf-Blm"/>
                             <constraint firstItem="7Nj-fb-aeq" firstAttribute="leading" secondItem="p2B-Ok-mys" secondAttribute="leadingMargin" id="VnX-99-7rI"/>
