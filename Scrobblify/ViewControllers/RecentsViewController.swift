@@ -91,12 +91,12 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         if (indexPath.row < self.recentTracks.count) {
-            let currentRecentTrack = self.recentTracks[indexPath.row]
+            let currentRecentTrack = recentTracks[indexPath.row]
             
-            let recentTrackCell: RecentTrackTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RecentTrackTableViewCell", for: indexPath) as! RecentTrackTableViewCell
+            let recentTrackCell = tableView.dequeueReusableCell(withIdentifier: "RecentTrackTableViewCell", for: indexPath) as! RecentTrackTableViewCell
             
+            recentTrackCell.selectionStyle = .none
             recentTrackCell.artImageView.layer.cornerRadius = 4;
-            
             recentTrackCell.nameLabel.text = currentRecentTrack.name!
             recentTrackCell.artistLabel.text = currentRecentTrack.artist!
             recentTrackCell.timeLabel.text = (currentRecentTrack.nowPlaying != nil) ? "Playing now" : currentRecentTrack.getFormattedTimestamp()
@@ -109,6 +109,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return recentTrackCell
         } else {
             let loadingCell =  tableView.dequeueReusableCell(withIdentifier: "LoadingRecentsTableViewCell", for: indexPath) as! LoadingRecentsTableViewCell
+            loadingCell.selectionStyle = .none
             loadingCell.loadingActivityIndicator.startAnimating()
             return loadingCell
         }
@@ -119,7 +120,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
         if maximumOffset - currentOffset <= 74 {
-            self.updateRecentTracks(isRefresh: false)
+            updateRecentTracks(isRefresh: false)
         }
     }
     
