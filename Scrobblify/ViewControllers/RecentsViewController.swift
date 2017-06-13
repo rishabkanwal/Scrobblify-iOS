@@ -29,11 +29,6 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         updateRecentTracks(isRefresh: true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func updateRecentTracks(isRefresh: Bool) {
         AppState.shared.requestsQueue.sync {
             if (isRefresh) {

@@ -1,5 +1,5 @@
 //
-//  Album.swift
+//  TopItem.swift
 //  Scrobblify
 //
 //  Created by Rishab Kanwal on 6/12/17.
@@ -7,11 +7,9 @@
 //
 
 import Foundation
-
-import Foundation
 import ObjectMapper
 
-class Album: Mappable {
+class TopItem: Mappable {
     
     var id: String?
     var name: String?

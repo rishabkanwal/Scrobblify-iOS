@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  TopItemTableViewCells.swift
 //  Scrobblify
 //
 //  Created by Rishab Kanwal on 6/12/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumTableViewCell: UITableViewCell {
+class TopItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var playsLabel: UILabel!
@@ -17,7 +17,7 @@ class AlbumTableViewCell: UITableViewCell {
     
 }
 
-class LoadingAlbumsTableViewCell: UITableViewCell {
+class LoadingTopItemsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
