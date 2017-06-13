@@ -232,7 +232,7 @@
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0J-2H-c7n">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0J-2H-c7n" userLabel="Plays Label">
                                         <rect key="frame" x="16" y="8" width="343" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -298,11 +298,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="joinDateLabel" destination="1Ts-ld-oTn" id="jiI-TV-xHl"/>
-                        <outlet property="listensLabel" destination="x0J-2H-c7n" id="q9s-sf-syL"/>
                         <outlet property="mainActivityIndicator" destination="3LQ-X6-xl9" id="gle-Nn-phO"/>
                         <outlet property="mainView" destination="4bZ-uh-dFL" id="cdL-VX-Bgp"/>
                         <outlet property="overlayImageView" destination="udL-Jc-IAE" id="VhS-I0-qGE"/>
                         <outlet property="pictureImageView" destination="NjL-Oh-nmi" id="dG8-YM-bMa"/>
+                        <outlet property="playsLabel" destination="x0J-2H-c7n" id="Gpb-XR-MAC"/>
                         <outlet property="refreshButton" destination="c4a-kF-Iet" id="Gyp-1A-eL5"/>
                         <outlet property="subscribersLabel" destination="0ZW-XL-3D8" id="NNd-Dv-5Ct"/>
                         <outlet property="usernameLabel" destination="jod-M7-yBn" id="7SV-25-qnK"/>

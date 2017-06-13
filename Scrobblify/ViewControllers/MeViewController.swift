@@ -16,7 +16,7 @@ class MeViewController: UIViewController {
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var listensLabel: UILabel!
+    @IBOutlet weak var playsLabel: UILabel!
     @IBOutlet weak var subscribersLabel: UILabel!
     @IBOutlet weak var joinDateLabel: UILabel!
     @IBOutlet weak var overlayImageView: UIImageView!
@@ -47,7 +47,7 @@ class MeViewController: UIViewController {
                     self.pictureImageView.isHidden = false
                     self.refreshButton.isHidden = false
                     self.usernameLabel.text = user!.username
-                    self.listensLabel.text = user!.getFormattedPlaycount() + " listens"
+                    self.playsLabel.text = user!.getFormattedPlaycount() + " total plays"
                     self.subscribersLabel.text = user!.subscribers! + " subscribers"
                     self.joinDateLabel.text = "Joined " + user!.getFormattedRegisterDate()
                     self.pictureImageView.kf.setImage(with: ImageResource(downloadURL: user!.imageUrl!))
