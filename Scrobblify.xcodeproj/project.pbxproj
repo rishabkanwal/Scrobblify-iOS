@@ -18,6 +18,7 @@
 		11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */; };
 		11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B491EEF5DBE00FF3634 /* TopItem.swift */; };
 		11A38B4C1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */; };
+		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
 		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
@@ -71,6 +72,7 @@
 		11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsViewController.swift; path = ViewControllers/TopItemsViewController.swift; sourceTree = "<group>"; };
 		11A38B491EEF5DBE00FF3634 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Utilities/TopItem.swift; sourceTree = "<group>"; };
 		11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsTableViewCells.swift; path = Utilities/TopItemsTableViewCells.swift; sourceTree = "<group>"; };
+		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */,
 				11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */,
 				11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */,
+				11A38B4D1EEF952B00FF3634 /* MeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 			files = (
 				11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */,
 				11A38B4C1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift in Sources */,
+				11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */,
 				11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
 				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,

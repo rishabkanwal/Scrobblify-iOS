@@ -12,7 +12,8 @@ import ObjectMapper
 class User: Mappable {
     
     var username: String?
-    var image: String?
+    var imageUrlString: String?
+    var imageUrl: URL?
     var url: String?
     var country: String?
     var age: String?
@@ -20,7 +21,7 @@ class User: Mappable {
     var subscribers: String?
     var playcount: String?
     var playlists: String?
-    var registeredDate: Int?
+    var registeredDate: Double?
     
     required init?(map: Map) {
         
@@ -28,7 +29,6 @@ class User: Mappable {
     
     func mapping(map: Map) {
         username <- map["user.name"]
-        image <- map["user.image.3.#text"]
         url <- map["user.url"]
         country <- map["user.country"]
         age <- map["user.age"]
@@ -37,6 +37,21 @@ class User: Mappable {
         playcount <- map["user.playcount"]
         playlists <- map["user.playlists"]
         registeredDate <- map["user.registered.#text"]
+        imageUrlString <- map["user.image.3.#text"]
+        imageUrl = URL(string: imageUrlString!)
     }
+    
+    func getFormattedPlaycount() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        return numberFormatter.string(from: Int(playcount!)! as NSNumber)!
+    }
+    
+    func getFormattedRegisterDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.string(from: Date(timeIntervalSince1970: registeredDate!))
+    }
+    
     
 }
