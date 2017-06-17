@@ -14,20 +14,29 @@ class LastFmRequest{
     let baseUrl = configuration().baseUrl
     let apiKey = configuration().apiKey
     let sharedSecret = configuration().sharedSecret
+    let baseParameters: Parameters = ["api_key": configuration().apiKey]
 
     
-    func getApiSignature(username: String, password: String, method: String) -> String {
-            return "api_key\(apiKey)method\(method)password\(password)username\(username)\(sharedSecret)".md5()
+    func getApiSignature(parameters: Parameters) -> String {
+        var apiParams = ""
+        for (parameter, value) in parameters.sorted(by: { $0.0 < $1.0 }) {
+            apiParams.append("\(parameter)\(value)")
+        }
+        return "\(apiParams)\(sharedSecret)".md5()
     }
     
     func makeApiCall (method: HTTPMethod, parameters: Parameters, completionHandler: @escaping (String?, Error?) -> ()) {
-        Alamofire.request(baseUrl, method: .post, parameters: parameters).validate().responseString { response in
+        var finalParameters = parameters
+        finalParameters["format"] = "json"
+        Alamofire.request(baseUrl, method: .post, parameters: finalParameters).validate().responseString { response in
             switch response.result {
             case .success(let value):
                 print(value)
                 completionHandler(value, nil)
             case .failure(let error):
-                print(error)
+                let json = String(data: response.data!, encoding: String.Encoding.utf8)
+                debugPrint(json)
+                print(parameters)
                 completionHandler(nil, error)
             }
         }
@@ -35,53 +44,45 @@ class LastFmRequest{
     }
     
     func getSession(username: String, password: String, completionHandler: @escaping (String?, Error?) -> ()) {
-        let apiMethod = "auth.getMobileSession"
-        let parameters: Parameters = ["format": "json",
-                                      "method": apiMethod,
-                                      "api_key": apiKey,
-                                      "api_sig": getApiSignature(username: username, password: password, method: apiMethod),
-                                      "username": username,
-                                      "password": password
-                                       ]
+        var parameters = baseParameters
+        parameters["method"] = "auth.getMobileSession"
+        parameters["username"] = username
+        parameters["password"] = password
+        parameters["api_sig"] = getApiSignature(parameters: parameters)
+        
         makeApiCall(method: .post, parameters: parameters, completionHandler: completionHandler)
         
     }
     
     func getUserInfo(completionHandler: @escaping (String?, Error?) -> ()) {
-        let parameters: Parameters = ["format": "json",
-                                      "method": "user.getInfo",
-                                      "api_key": apiKey,
-                                      "user": AppState.shared.session!.username!,
-                                      "password": "password"
-                                      ]
+        var parameters = baseParameters
+        parameters["method"] = "user.getInfo"
+        parameters["user"] = AppState.shared.session!.username!
+        
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
         
     }
     
     func getRecentTracks(page: Int, completionHandler: @escaping (String?, Error?) -> ()) {
-        let parameters: Parameters = ["format": "json",
-                                      "method": "user.getRecentTracks",
-                                      "api_key": apiKey,
-                                      "user": AppState.shared.session!.username!,
-                                      "password": "password",
-                                      "limit": 200,
-                                      "page": page
-                                      ]
+        var parameters = baseParameters
+        parameters["method"] = "user.getRecentTracks"
+        parameters["user"] = AppState.shared.session!.username!
+        parameters["limit"] = 200
+        parameters["page"] = page
+        
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
         
     }
     
     func getTopItems(apiMethod: String, page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
+        var parameters = baseParameters
+        parameters["method"] = apiMethod
+        parameters["user"] = AppState.shared.session!.username!
+        parameters["limit"] = 200
+        parameters["page"] = page
+        parameters["period"] = timePeriod
+
         
-        let parameters: Parameters = ["format": "json",
-                                      "method": apiMethod,
-                                      "api_key": apiKey,
-                                      "user": AppState.shared.session!.username!,
-                                      "password": "password",
-                                      "limit": 200,
-                                      "page": page,
-                                      "period": timePeriod
-        ]
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
     }
     
