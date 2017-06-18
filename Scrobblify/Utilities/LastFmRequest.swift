@@ -31,12 +31,9 @@ class LastFmRequest{
         Alamofire.request(baseUrl, method: .post, parameters: finalParameters).validate().responseString { response in
             switch response.result {
             case .success(let value):
-                print(value)
+                //print(value)
                 completionHandler(value, nil)
             case .failure(let error):
-                let json = String(data: response.data!, encoding: String.Encoding.utf8)
-                debugPrint(json)
-                print(parameters)
                 completionHandler(nil, error)
             }
         }
@@ -84,6 +81,39 @@ class LastFmRequest{
 
         
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
+    
+    
+    func postTrack(method: String, track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
+        var parameters = baseParameters
+        parameters["method"] = method
+        parameters["sk"] = AppState.shared.session!.key!
+        parameters["track"] = track
+        parameters["artist"] = artist
+        parameters["album"] = album
+        parameters["albumArtist"] = albumArtist
+        parameters["mbid"] = mbid
+        parameters["timestamp"] = String(timestamp)
+        parameters["api_sig"] = getApiSignature(parameters: parameters)
+        
+        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
+    func searchTrack(track:String, artist:String, completionHandler: @escaping (String?, Error?) -> ()) {
+        var parameters = baseParameters
+        parameters["method"] = "track.search"
+        parameters["track"] = track
+        parameters["artist"] = artist
+        parameters["limit"] = 1
+        
+        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
+    }
+    
+    func scrobbleTrack(track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
+        postTrack(method: "track.scrobble", track: track, artist: artist, album: album, albumArtist: albumArtist, mbid: mbid, timestamp: timestamp, completionHandler: completionHandler)
+    }
+    
+    func updateNowPlaying(track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
+        postTrack(method: "track.updateNowPlaying", track: track, artist: artist, album: album, albumArtist: albumArtist, mbid: mbid, timestamp: timestamp, completionHandler: completionHandler)
     }
     
 }

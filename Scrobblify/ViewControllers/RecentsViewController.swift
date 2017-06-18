@@ -12,7 +12,7 @@ import Kingfisher
 import MediaPlayer
 
 class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var recentsTableView: UITableView!
     
     var refreshControl: UIRefreshControl!
@@ -22,11 +22,12 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var currentPage = 1
     
     var totalTracks = -1
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
+        getNowPlayingInfo()
     }
     
     func updateRecentTracks(isRefresh: Bool) {
@@ -67,16 +68,16 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func refresh(_ sender: AnyObject){
         self.refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
         if(recentTracks.count != 0) {
-                updateRecentTracks(isRefresh: true)
+            updateRecentTracks(isRefresh: true)
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if (totalTracks == self.recentTracks.count) {
-                return self.recentTracks.count
-            } else {
-                return self.recentTracks.count + 1
-            }
+        if (totalTracks == self.recentTracks.count) {
+            return self.recentTracks.count
+        } else {
+            return self.recentTracks.count + 1
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -127,6 +128,35 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         loadMoreRecents(scrollView: scrollView)
     }
     
-
+    func getNowPlayingInfo() {
+        let nowPlaying = MPMusicPlayerController.systemMusicPlayer().nowPlayingItem
+        if (nowPlaying != nil) {
+            let track = nowPlaying!.title!
+            let artist = nowPlaying!.artist!
+            let album = nowPlaying!.albumTitle!
+            let albumArtist = nowPlaying!.albumArtist!
+            AppState.shared.lastFmRequest
+                .searchTrack(track: track, artist: artist,
+                             completionHandler: {
+                                responseJsonString, error in
+                                if !(error != nil) {
+                                    let searchTrack = SearchTrack(JSONString: responseJsonString!)
+                                    if (searchTrack?.name != nil) {
+                                        AppState.shared.lastFmRequest.updateNowPlaying (track: track, artist: artist, album: album, albumArtist: albumArtist, mbid: searchTrack!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+                                            responseJsonString, error in
+                                            if !(error != nil) {
+                                                print(responseJsonString!)
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                                    self.updateRecentTracks(isRefresh: true)
+                                                })
+                                            } else{}
+                                        })
+                                    }
+                                    
+                                } else {}
+                })
+        }
+    }
+    
 }
 

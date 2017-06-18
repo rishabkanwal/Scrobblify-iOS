@@ -15,6 +15,7 @@
 		113E6DB91EED418C009A9E2E /* ScrobblifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */; };
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
 		114764931EEF03AC0028936F /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764921EEF03AC0028936F /* TracksViewController.swift */; };
+		116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B5F5B1EF5380900391503 /* SearchTrack.swift */; };
 		11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */; };
 		11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B491EEF5DBE00FF3634 /* TopItem.swift */; };
 		11A38B4C1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */; };
@@ -69,6 +70,7 @@
 		113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyUITests.swift; sourceTree = "<group>"; };
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114764921EEF03AC0028936F /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksViewController.swift; path = ViewControllers/TracksViewController.swift; sourceTree = "<group>"; };
+		116B5F5B1EF5380900391503 /* SearchTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTrack.swift; path = Utilities/SearchTrack.swift; sourceTree = "<group>"; };
 		11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsViewController.swift; path = ViewControllers/TopItemsViewController.swift; sourceTree = "<group>"; };
 		11A38B491EEF5DBE00FF3634 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Utilities/TopItem.swift; sourceTree = "<group>"; };
 		11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsTableViewCells.swift; path = Utilities/TopItemsTableViewCells.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				11FE1E8F1EEE2C53004FFB51 /* Session.swift */,
 				11FE1E901EEE2C53004FFB51 /* User.swift */,
 				11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */,
+				116B5F5B1EF5380900391503 /* SearchTrack.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -311,6 +314,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4NLDB2WUE7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					113E6DB31EED418C009A9E2E = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -527,6 +535,7 @@
 				11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */,
 				11FE1E961EEE2C53004FFB51 /* User.swift in Sources */,
 				11FE1E931EEE2C53004FFB51 /* RecentsTableViewCells.swift in Sources */,
+				116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */,
 				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
 				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
 				11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */,

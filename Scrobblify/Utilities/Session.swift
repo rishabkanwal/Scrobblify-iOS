@@ -13,6 +13,7 @@ class Session: Mappable {
     
     var key: String?
     var username: String?
+    var password: String?
     var subscribers: Int?
     
     init() {
@@ -26,6 +27,7 @@ class Session: Mappable {
     func mapping(map: Map) {
         key <- map["session.key"]
         username <- map["session.name"]
+        password = ""
         subscribers <- map["session.subscriber"]
     }
     
