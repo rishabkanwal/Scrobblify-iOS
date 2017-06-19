@@ -15,7 +15,5 @@ class TopItemTableViewCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var artImageView: UIImageView!
     
-    
-    
 }
 
