@@ -24,6 +24,9 @@
 		11AA18871EF7B94C006B014C /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18861EF7B94C006B014C /* Snackbar.swift */; };
 		11AA188A1EF7B96D006B014C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18881EF7B96D006B014C /* MainTabBarController.swift */; };
 		11AA188B1EF7B96D006B014C /* ScrobbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18891EF7B96D006B014C /* ScrobbleController.swift */; };
+		11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */; };
+		11AA188F1EF7D81B006B014C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11AA188E1EF7D81B006B014C /* blank.wav */; };
+		11AA18911EF7E5C9006B014C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AA18901EF7E5C9006B014C /* MediaPlayer.framework */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
 		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
 		11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */; };
@@ -82,6 +85,9 @@
 		11AA18861EF7B94C006B014C /* Snackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snackbar.swift; path = Utilities/Snackbar.swift; sourceTree = "<group>"; };
 		11AA18881EF7B96D006B014C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Utilities/MainTabBarController.swift; sourceTree = "<group>"; };
 		11AA18891EF7B96D006B014C /* ScrobbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrobbleController.swift; path = Utilities/ScrobbleController.swift; sourceTree = "<group>"; };
+		11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = Utilities/BackgroundTask.swift; sourceTree = "<group>"; };
+		11AA188E1EF7D81B006B014C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
+		11AA18901EF7E5C9006B014C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsViewController.swift; path = ViewControllers/RecentsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AA18911EF7E5C9006B014C /* MediaPlayer.framework in Frameworks */,
 				AAB4971AF5916B617A2291BF /* Pods_Scrobblify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +163,7 @@
 		113E6DA01EED418C009A9E2E /* Scrobblify */ = {
 			isa = PBXGroup;
 			children = (
+				11AA188E1EF7D81B006B014C /* blank.wav */,
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
 				11059C991EED422D00E62F27 /* Configuration.swift */,
 				11FE1E7B1EEE2B03004FFB51 /* ViewControllers */,
@@ -217,6 +225,7 @@
 				11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */,
 				116B5F5B1EF5380900391503 /* SearchTrack.swift */,
 				11AA18861EF7B94C006B014C /* Snackbar.swift */,
+				11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 		5EB06B3CB4B7AA371F12DC51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11AA18901EF7E5C9006B014C /* MediaPlayer.framework */,
 				1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */,
 				1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */,
 				814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */,
@@ -321,7 +331,7 @@
 				TargetAttributes = {
 					113E6D9D1EED418C009A9E2E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4NLDB2WUE7;
+						DevelopmentTeam = YK77JC3ZB2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -369,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */,
+				11AA188F1EF7D81B006B014C /* blank.wav in Resources */,
 				113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */,
 				11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */,
 			);
@@ -551,6 +562,7 @@
 				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
 				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
 				11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */,
+				11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */,
 				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,
 				11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */,
 				11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */,
@@ -691,7 +703,7 @@
 			baseConfigurationReference = 6FA7DA4065DD93034C94E39C /* Pods-Scrobblify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NLDB2WUE7;
+				DEVELOPMENT_TEAM = YK77JC3ZB2;
 				INFOPLIST_FILE = Scrobblify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rishabkanwal.Scrobblify;
@@ -705,7 +717,7 @@
 			baseConfigurationReference = 41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NLDB2WUE7;
+				DEVELOPMENT_TEAM = YK77JC3ZB2;
 				INFOPLIST_FILE = Scrobblify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rishabkanwal.Scrobblify;

@@ -28,18 +28,14 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
         updateNowPlaying()
+        AppState.shared.scrobbleController.updateInBackground()
     }
     
     func updateNowPlaying() {
-        AppState.shared.scrobbleController.setNowPlaying(completionHandler: {
-            success in
-            if (success) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    self.updateRecentTracks(isRefresh: true)
-                })
-            }
+        AppState.shared.scrobbleController.update()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.updateRecentTracks(isRefresh: true)
         })
-
     }
     
     func updateRecentTracks(isRefresh: Bool) {
@@ -112,7 +108,6 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         if(recentTracks.count != 0) {
             updateRecentTracks(isRefresh: true)
-            updateNowPlaying()
         }
     }
     
