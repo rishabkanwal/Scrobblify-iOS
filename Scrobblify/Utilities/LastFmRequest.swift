@@ -31,7 +31,7 @@ class LastFmRequest{
         Alamofire.request(baseUrl, method: .post, parameters: finalParameters).validate().responseString { response in
             switch response.result {
             case .success(let value):
-                print(value)
+                //print(value)
                 completionHandler(value, nil)
             case .failure(let error):
                 completionHandler(nil, error)
