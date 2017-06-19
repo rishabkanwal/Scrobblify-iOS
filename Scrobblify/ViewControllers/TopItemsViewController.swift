@@ -56,10 +56,11 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     @IBAction func timeFrameChanged(_ sender: Any) {
-        updateTopItems(isRefresh: true)
         self.currentPage = 1
         self.topItems = []
         self.topItemsTableView.reloadData()
+        showTableFooter()
+        updateTopItems(isRefresh: true)
     }
     
     func updateTopItems(isRefresh: Bool) {
@@ -78,9 +79,13 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
                     for (_, valueJson) in responseJson[self.baseJsonObject!][self.mainJsonObject!] {
                         self.topItems.append(TopItem(JSONString: valueJson.rawString()!)!)
                     }
+                    if (self.topItems.count == self.totalTopItems) {
+                        self.hideTableFooter()
+                    } else {
+                        self.showTableFooter()
+                    }
                     DispatchQueue.main.async(execute: {
                         self.refreshControl.endRefreshing()
-                        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
                         self.topItemsTableView.reloadData()
                     })
                 }
@@ -88,29 +93,30 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func showTableFooter() {
+        topItemsTableView.tableFooterView?.frame.size.height = 74
+        topItemsTableView.tableFooterView?.isHidden = false
+    }
     
+    func hideTableFooter() {
+        topItemsTableView.tableFooterView?.frame.size.height = 0
+        topItemsTableView.tableFooterView?.isHidden = true
+    }
     
     func setupRefreshControl(){
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: #selector(TopItemsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
-        self.topItemsTableView.addSubview(refreshControl)
-        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(TopItemsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        topItemsTableView.addSubview(refreshControl)
     }
     
     func refresh(_ sender: AnyObject){
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
         if(topItems.count != 0) {
             self.updateTopItems(isRefresh: true)
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (totalTopItems == self.topItems.count) {
-            return self.topItems.count
-        } else {
-            return self.topItems.count + 1
-        }
+        return self.topItems.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -119,10 +125,11 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
+        let topItemCell = tableView.dequeueReusableCell(withIdentifier: "TopItemTableViewCell", for: indexPath) as! TopItemTableViewCell
+        topItemCell.selectionStyle = .none
+        
         if (indexPath.row < self.topItems.count) {
             let currentTopItem = topItems[indexPath.row]
-            
-            let topItemCell = tableView.dequeueReusableCell(withIdentifier: "TopItemTableViewCell", for: indexPath) as! TopItemTableViewCell
             
             topItemCell.selectionStyle = .none
             topItemCell.artImageView.layer.cornerRadius = 4;
@@ -137,12 +144,9 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
             
             return topItemCell
             
-        } else {
-            let loadingCell =  tableView.dequeueReusableCell(withIdentifier: "LoadingTopItemsTableViewCell", for: indexPath) as! LoadingTopItemsTableViewCell
-            loadingCell.selectionStyle = .none
-            loadingCell.loadingActivityIndicator.startAnimating()
-            return loadingCell
         }
+        
+        return topItemCell
     }
     
     func loadMoreTopItems(scrollView: UIScrollView) {

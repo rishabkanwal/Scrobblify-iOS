@@ -15,10 +15,7 @@ class TopItemTableViewCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var artImageView: UIImageView!
     
+    
+    
 }
 
-class LoadingTopItemsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
-    
-}

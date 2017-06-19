@@ -16,9 +16,3 @@ class RecentTrackTableViewCell: UITableViewCell {
     @IBOutlet weak var artImageView: UIImageView!
     
 }
-
-class LoadingRecentsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
-    
-}
