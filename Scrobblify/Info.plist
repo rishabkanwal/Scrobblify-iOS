@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Uses now playing information to scrobble now playing info to last.fm</string>
+	<string>Scrobblify uses now playing information to scrobble to last.fm</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

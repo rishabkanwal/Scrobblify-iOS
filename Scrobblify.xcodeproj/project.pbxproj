@@ -16,9 +16,10 @@
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
 		114764931EEF03AC0028936F /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764921EEF03AC0028936F /* TracksViewController.swift */; };
 		116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B5F5B1EF5380900391503 /* SearchTrack.swift */; };
+		116B5F601EF66FB300391503 /* ScrobbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B5F5F1EF66FB300391503 /* ScrobbleController.swift */; };
 		11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */; };
 		11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B491EEF5DBE00FF3634 /* TopItem.swift */; };
-		11A38B4C1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */; };
+		11A38B4C1EEF5DBE00FF3634 /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */; };
 		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
@@ -27,7 +28,7 @@
 		11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */; };
 		11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */; };
 		11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */; };
-		11FE1E931EEE2C53004FFB51 /* RecentsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */; };
+		11FE1E931EEE2C53004FFB51 /* RecentTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */; };
 		11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */; };
 		11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8F1EEE2C53004FFB51 /* Session.swift */; };
 		11FE1E961EEE2C53004FFB51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E901EEE2C53004FFB51 /* User.swift */; };
@@ -71,9 +72,10 @@
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114764921EEF03AC0028936F /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksViewController.swift; path = ViewControllers/TracksViewController.swift; sourceTree = "<group>"; };
 		116B5F5B1EF5380900391503 /* SearchTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTrack.swift; path = Utilities/SearchTrack.swift; sourceTree = "<group>"; };
+		116B5F5F1EF66FB300391503 /* ScrobbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrobbleController.swift; sourceTree = "<group>"; };
 		11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsViewController.swift; path = ViewControllers/TopItemsViewController.swift; sourceTree = "<group>"; };
 		11A38B491EEF5DBE00FF3634 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Utilities/TopItem.swift; sourceTree = "<group>"; };
-		11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsTableViewCells.swift; path = Utilities/TopItemsTableViewCells.swift; sourceTree = "<group>"; };
+		11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemTableViewCell.swift; path = Utilities/TopItemTableViewCell.swift; sourceTree = "<group>"; };
 		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 		11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = ViewControllers/SplashViewController.swift; sourceTree = "<group>"; };
 		11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Utilities/DateFormatter.swift; sourceTree = "<group>"; };
 		11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFmRequest.swift; path = Utilities/LastFmRequest.swift; sourceTree = "<group>"; };
-		11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsTableViewCells.swift; path = Utilities/RecentsTableViewCells.swift; sourceTree = "<group>"; };
+		11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrackTableViewCell.swift; path = Utilities/RecentTrackTableViewCell.swift; sourceTree = "<group>"; };
 		11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrack.swift; path = Utilities/RecentTrack.swift; sourceTree = "<group>"; };
 		11FE1E8F1EEE2C53004FFB51 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Utilities/Session.swift; sourceTree = "<group>"; };
 		11FE1E901EEE2C53004FFB51 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Utilities/User.swift; sourceTree = "<group>"; };
@@ -199,15 +201,16 @@
 			isa = PBXGroup;
 			children = (
 				11A38B491EEF5DBE00FF3634 /* TopItem.swift */,
-				11A38B4A1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift */,
+				11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */,
 				11FE1E991EEE2D2C004FFB51 /* AppState.swift */,
 				11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */,
 				11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */,
 				11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */,
 				11FE1E8F1EEE2C53004FFB51 /* Session.swift */,
 				11FE1E901EEE2C53004FFB51 /* User.swift */,
-				11FE1E8D1EEE2C53004FFB51 /* RecentsTableViewCells.swift */,
+				11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */,
 				116B5F5B1EF5380900391503 /* SearchTrack.swift */,
+				116B5F5F1EF66FB300391503 /* ScrobbleController.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -525,7 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */,
-				11A38B4C1EEF5DBE00FF3634 /* TopItemsTableViewCells.swift in Sources */,
+				11A38B4C1EEF5DBE00FF3634 /* TopItemTableViewCell.swift in Sources */,
 				11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */,
 				11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
@@ -534,7 +537,7 @@
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,
 				11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */,
 				11FE1E961EEE2C53004FFB51 /* User.swift in Sources */,
-				11FE1E931EEE2C53004FFB51 /* RecentsTableViewCells.swift in Sources */,
+				11FE1E931EEE2C53004FFB51 /* RecentTrackTableViewCell.swift in Sources */,
 				116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */,
 				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
 				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
@@ -542,6 +545,7 @@
 				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,
 				11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */,
 				11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */,
+				116B5F601EF66FB300391503 /* ScrobbleController.swift in Sources */,
 				114764931EEF03AC0028936F /* TracksViewController.swift in Sources */,
 				11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */,
 			);
