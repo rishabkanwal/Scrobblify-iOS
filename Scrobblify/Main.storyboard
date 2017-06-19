@@ -403,10 +403,10 @@
             </objects>
             <point key="canvasLocation" x="-883" y="-583"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MainTabBarController" customModule="Scrobblify" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -430,7 +430,7 @@
         <scene sceneID="T0I-We-HTm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jHY-wg-EAg" userLabel="Me Navigation Bar" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" image="Me" id="EiH-wu-2Hg"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="Me" image="Me" id="EiH-wu-2Hg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WNU-tG-rpl" userLabel="Navigation Bar Item">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -470,7 +470,7 @@
         <scene sceneID="yXf-ro-pjm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GfL-f0-W3g" userLabel="Artists Navigation Bar Item" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Artists" image="Artists" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Artists" image="Artists" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Pbn-Vi-myX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -490,7 +490,7 @@
         <scene sceneID="Mc7-iN-Sty">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcX-NP-IfO" userLabel="Albums Navigation Bar Item" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" image="Albums" id="kUQ-py-egY"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Albums" image="Albums" id="kUQ-py-egY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="fjh-Lk-eg5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -510,7 +510,7 @@
         <scene sceneID="s7P-w9-kdq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mvh-ek-JkO" userLabel="Tracks Navigation Bar Item" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tracks" image="Tracks" id="ALZ-AR-FTf"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Tracks" image="Tracks" id="ALZ-AR-FTf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hYs-Xv-zEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

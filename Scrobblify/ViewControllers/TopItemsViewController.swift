@@ -93,6 +93,14 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func scrollToTopAndRefresh() {
+        topItemsTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
+        refreshControl.beginRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
+            self.refresh(self.refreshControl)
+        })
+
+    }
     func showTableFooter() {
         topItemsTableView.tableFooterView?.frame.size.height = 74
         topItemsTableView.tableFooterView?.isHidden = false

@@ -22,6 +22,7 @@
 		11A38B4C1EEF5DBE00FF3634 /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */; };
 		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
+		11AA18851EF753B3006B014C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18841EF753B3006B014C /* MainTabBarController.swift */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
 		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
 		11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */; };
@@ -78,6 +79,7 @@
 		11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemTableViewCell.swift; path = Utilities/TopItemTableViewCell.swift; sourceTree = "<group>"; };
 		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
+		11AA18841EF753B3006B014C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		11FE1E801EEE2BE4004FFB51 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentsViewController.swift; path = ViewControllers/RecentsViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */,
 				116B5F5B1EF5380900391503 /* SearchTrack.swift */,
 				116B5F5F1EF66FB300391503 /* ScrobbleController.swift */,
+				11AA18841EF753B3006B014C /* MainTabBarController.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				11FE1E931EEE2C53004FFB51 /* RecentTrackTableViewCell.swift in Sources */,
 				116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */,
 				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
+				11AA18851EF753B3006B014C /* MainTabBarController.swift in Sources */,
 				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
 				11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */,
 				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,

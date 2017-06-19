@@ -79,6 +79,14 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func scrollToTopAndRefresh() {
+        recentsTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
+        refreshControl.beginRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
+            self.refresh(self.refreshControl)
+        })
+    }
+    
     func showTableFooter() {
         recentsTableView.tableFooterView?.frame.size.height = 74
         recentsTableView.tableFooterView?.isHidden = false
