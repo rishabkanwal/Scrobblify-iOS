@@ -34,7 +34,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         AppState.shared.scrobbleController.setNowPlaying(completionHandler: {
             success in
             if (success) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                     self.updateRecentTracks(isRefresh: true)
                 })
             }
