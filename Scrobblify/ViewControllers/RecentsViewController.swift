@@ -52,7 +52,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             AppState.shared.lastFmRequest.getRecentTracks(page: self.currentPage, completionHandler: {
                 responseJsonString, error in
-                if !(error != nil) {
+                if (error == nil) {
                     let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)
                     self.totalTracks = Int(responseJson["recenttracks"]["@attr"]["total"].string!)!
                     for (_, valueJson) in responseJson["recenttracks"]["track"] {
@@ -72,6 +72,9 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
                         self.refreshControl.endRefreshing()
                         self.recentsTableView.reloadData()
                     })
+                } else {
+                    makeSnackbar(message: "Network unavailable, refresh to try again")
+                    self.hideTableFooter()
                 }
                 
             })

@@ -7,22 +7,12 @@
 //
 
 import UIKit
-import TTGSnackbar
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
-    
-    func makeSnackbar(message: String) {
-        DispatchQueue.main.async(execute: {
-            let snackbar = TTGSnackbar.init(message: "  " + message, duration: .middle)
-            snackbar.backgroundColor = UIColor.darkGray
-            snackbar.show()
-        })
-
-    }
     
     func segueToTabBarController() {
         DispatchQueue.main.async(execute: {
@@ -41,7 +31,7 @@ class LoginViewController: UIViewController {
                 self.segueToTabBarController()
             } else {
                 DispatchQueue.main.async(execute: {
-                    self.makeSnackbar(message: "Check login credentials")
+                    makeSnackbar(message: "Check login credentials")
                     self.loginActivityIndicator.stopAnimating()
                 })
 
@@ -56,7 +46,7 @@ class LoginViewController: UIViewController {
         self.usernameTextField.endEditing(true)
         self.passwordTextField.endEditing(true)
         if (username == "" || password == "") {
-            self.makeSnackbar(message: "Enter both fields")
+            makeSnackbar(message: "Enter both fields")
         } else {
             
             startSession(username: username!, password: password!)

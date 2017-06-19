@@ -73,7 +73,7 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
             }
             AppState.shared.lastFmRequest.getTopItems(apiMethod: apiMethod!, page: self.currentPage, timePeriod: self.getCurrentTimePeriod(), completionHandler: {
                 responseJsonString, error in
-                if !(error != nil) {
+                if (error == nil) {
                     let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)
                     self.totalTopItems = Int(responseJson[self.baseJsonObject!]["@attr"]["total"].string!)!
                     for (_, valueJson) in responseJson[self.baseJsonObject!][self.mainJsonObject!] {
@@ -88,6 +88,9 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
                         self.refreshControl.endRefreshing()
                         self.topItemsTableView.reloadData()
                     })
+                } else {
+                    makeSnackbar(message: "Network unavailable, refresh to try again")
+                    self.hideTableFooter()
                 }
             })
         }
