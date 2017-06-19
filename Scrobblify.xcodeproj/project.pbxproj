@@ -10,19 +10,23 @@
 		11059CA31EED422D00E62F27 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11059C991EED422D00E62F27 /* Configuration.swift */; };
 		11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CAD1EED44FF00E62F27 /* Main.storyboard */; };
 		11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CB11EED489200E62F27 /* LaunchScreen.storyboard */; };
+		113D080C1EF8990000190655 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08071EF8990000190655 /* SearchTrack.swift */; };
+		113D080D1EF8990000190655 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08081EF8990000190655 /* Session.swift */; };
+		113D080E1EF8990000190655 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08091EF8990000190655 /* RecentTrack.swift */; };
+		113D080F1EF8990000190655 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D080A1EF8990000190655 /* User.swift */; };
+		113D08101EF8990000190655 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D080B1EF8990000190655 /* TopItem.swift */; };
+		113D08141EF8991400190655 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08111EF8991400190655 /* MainTabBarController.swift */; };
+		113D08151EF8991400190655 /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08121EF8991400190655 /* TopItemTableViewCell.swift */; };
+		113D08161EF8991400190655 /* RecentTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08131EF8991400190655 /* RecentTrackTableViewCell.swift */; };
 		113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DA11EED418C009A9E2E /* AppDelegate.swift */; };
 		113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113E6DAA1EED418C009A9E2E /* Assets.xcassets */; };
 		113E6DB91EED418C009A9E2E /* ScrobblifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */; };
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
 		114764931EEF03AC0028936F /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764921EEF03AC0028936F /* TracksViewController.swift */; };
-		116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B5F5B1EF5380900391503 /* SearchTrack.swift */; };
 		11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */; };
-		11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B491EEF5DBE00FF3634 /* TopItem.swift */; };
-		11A38B4C1EEF5DBE00FF3634 /* TopItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */; };
 		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
 		11AA18871EF7B94C006B014C /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18861EF7B94C006B014C /* Snackbar.swift */; };
-		11AA188A1EF7B96D006B014C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18881EF7B96D006B014C /* MainTabBarController.swift */; };
 		11AA188B1EF7B96D006B014C /* ScrobbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18891EF7B96D006B014C /* ScrobbleController.swift */; };
 		11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */; };
 		11AA188F1EF7D81B006B014C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11AA188E1EF7D81B006B014C /* blank.wav */; };
@@ -33,10 +37,6 @@
 		11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */; };
 		11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */; };
 		11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */; };
-		11FE1E931EEE2C53004FFB51 /* RecentTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */; };
-		11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */; };
-		11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E8F1EEE2C53004FFB51 /* Session.swift */; };
-		11FE1E961EEE2C53004FFB51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E901EEE2C53004FFB51 /* User.swift */; };
 		11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E991EEE2D2C004FFB51 /* AppState.swift */; };
 		4F3BA3502D3AA595F53EA9AF /* Pods_ScrobblifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814908976A6155F12A592B4E /* Pods_ScrobblifyUITests.framework */; };
 		AAB4971AF5916B617A2291BF /* Pods_Scrobblify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */; };
@@ -65,6 +65,14 @@
 		11059CAD1EED44FF00E62F27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		11059CB11EED489200E62F27 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		113D08071EF8990000190655 /* SearchTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTrack.swift; path = Models/SearchTrack.swift; sourceTree = "<group>"; };
+		113D08081EF8990000190655 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Models/Session.swift; sourceTree = "<group>"; };
+		113D08091EF8990000190655 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrack.swift; path = Models/RecentTrack.swift; sourceTree = "<group>"; };
+		113D080A1EF8990000190655 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		113D080B1EF8990000190655 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Models/TopItem.swift; sourceTree = "<group>"; };
+		113D08111EF8991400190655 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Views/MainTabBarController.swift; sourceTree = "<group>"; };
+		113D08121EF8991400190655 /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemTableViewCell.swift; path = Views/TopItemTableViewCell.swift; sourceTree = "<group>"; };
+		113D08131EF8991400190655 /* RecentTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrackTableViewCell.swift; path = Views/RecentTrackTableViewCell.swift; sourceTree = "<group>"; };
 		113E6D9E1EED418C009A9E2E /* Scrobblify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrobblify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113E6DA11EED418C009A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		113E6DAA1EED418C009A9E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,14 +84,10 @@
 		113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyUITests.swift; sourceTree = "<group>"; };
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114764921EEF03AC0028936F /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksViewController.swift; path = ViewControllers/TracksViewController.swift; sourceTree = "<group>"; };
-		116B5F5B1EF5380900391503 /* SearchTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTrack.swift; path = Utilities/SearchTrack.swift; sourceTree = "<group>"; };
 		11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsViewController.swift; path = ViewControllers/TopItemsViewController.swift; sourceTree = "<group>"; };
-		11A38B491EEF5DBE00FF3634 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Utilities/TopItem.swift; sourceTree = "<group>"; };
-		11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemTableViewCell.swift; path = Utilities/TopItemTableViewCell.swift; sourceTree = "<group>"; };
 		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
 		11AA18861EF7B94C006B014C /* Snackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snackbar.swift; path = Utilities/Snackbar.swift; sourceTree = "<group>"; };
-		11AA18881EF7B96D006B014C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Utilities/MainTabBarController.swift; sourceTree = "<group>"; };
 		11AA18891EF7B96D006B014C /* ScrobbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrobbleController.swift; path = Utilities/ScrobbleController.swift; sourceTree = "<group>"; };
 		11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = Utilities/BackgroundTask.swift; sourceTree = "<group>"; };
 		11AA188E1EF7D81B006B014C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
@@ -94,10 +98,6 @@
 		11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = ViewControllers/SplashViewController.swift; sourceTree = "<group>"; };
 		11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Utilities/DateFormatter.swift; sourceTree = "<group>"; };
 		11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFmRequest.swift; path = Utilities/LastFmRequest.swift; sourceTree = "<group>"; };
-		11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrackTableViewCell.swift; path = Utilities/RecentTrackTableViewCell.swift; sourceTree = "<group>"; };
-		11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrack.swift; path = Utilities/RecentTrack.swift; sourceTree = "<group>"; };
-		11FE1E8F1EEE2C53004FFB51 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Utilities/Session.swift; sourceTree = "<group>"; };
-		11FE1E901EEE2C53004FFB51 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Utilities/User.swift; sourceTree = "<group>"; };
 		11FE1E991EEE2D2C004FFB51 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = Utilities/AppState.swift; sourceTree = "<group>"; };
 		1B482D084AAAFD7575BB0F55 /* Pods_ScrobblifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrobblifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE710925DB108B7319A1808 /* Pods_Scrobblify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrobblify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +138,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113D08051EF898C100190655 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				113D08071EF8990000190655 /* SearchTrack.swift */,
+				113D08081EF8990000190655 /* Session.swift */,
+				113D08091EF8990000190655 /* RecentTrack.swift */,
+				113D080A1EF8990000190655 /* User.swift */,
+				113D080B1EF8990000190655 /* TopItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		113D08061EF898CE00190655 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				113D08111EF8991400190655 /* MainTabBarController.swift */,
+				113D08121EF8991400190655 /* TopItemTableViewCell.swift */,
+				113D08131EF8991400190655 /* RecentTrackTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		113E6D951EED418C009A9E2E = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +185,11 @@
 		113E6DA01EED418C009A9E2E /* Scrobblify */ = {
 			isa = PBXGroup;
 			children = (
+				113D08061EF898CE00190655 /* Views */,
 				11AA188E1EF7D81B006B014C /* blank.wav */,
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
 				11059C991EED422D00E62F27 /* Configuration.swift */,
+				113D08051EF898C100190655 /* Models */,
 				11FE1E7B1EEE2B03004FFB51 /* ViewControllers */,
 				11FE1E8A1EEE2BEF004FFB51 /* Utilities */,
 				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
@@ -212,18 +236,10 @@
 		11FE1E8A1EEE2BEF004FFB51 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				11AA18881EF7B96D006B014C /* MainTabBarController.swift */,
 				11AA18891EF7B96D006B014C /* ScrobbleController.swift */,
-				11A38B491EEF5DBE00FF3634 /* TopItem.swift */,
-				11A38B4A1EEF5DBE00FF3634 /* TopItemTableViewCell.swift */,
 				11FE1E991EEE2D2C004FFB51 /* AppState.swift */,
 				11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */,
 				11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */,
-				11FE1E8E1EEE2C53004FFB51 /* RecentTrack.swift */,
-				11FE1E8F1EEE2C53004FFB51 /* Session.swift */,
-				11FE1E901EEE2C53004FFB51 /* User.swift */,
-				11FE1E8D1EEE2C53004FFB51 /* RecentTrackTableViewCell.swift */,
-				116B5F5B1EF5380900391503 /* SearchTrack.swift */,
 				11AA18861EF7B94C006B014C /* Snackbar.swift */,
 				11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */,
 			);
@@ -545,9 +561,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FE1E911EEE2C53004FFB51 /* DateFormatter.swift in Sources */,
+				113D08151EF8991400190655 /* TopItemTableViewCell.swift in Sources */,
 				11AA18871EF7B94C006B014C /* Snackbar.swift in Sources */,
-				11AA188A1EF7B96D006B014C /* MainTabBarController.swift in Sources */,
-				11A38B4C1EEF5DBE00FF3634 /* TopItemTableViewCell.swift in Sources */,
+				113D08141EF8991400190655 /* MainTabBarController.swift in Sources */,
 				11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */,
 				11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
@@ -555,16 +571,16 @@
 				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,
 				11FE1E921EEE2C53004FFB51 /* LastFmRequest.swift in Sources */,
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,
-				11FE1E941EEE2C53004FFB51 /* RecentTrack.swift in Sources */,
-				11FE1E961EEE2C53004FFB51 /* User.swift in Sources */,
-				11FE1E931EEE2C53004FFB51 /* RecentTrackTableViewCell.swift in Sources */,
-				116B5F5C1EF5380900391503 /* SearchTrack.swift in Sources */,
+				113D080E1EF8990000190655 /* RecentTrack.swift in Sources */,
+				113D08161EF8991400190655 /* RecentTrackTableViewCell.swift in Sources */,
 				11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */,
 				11FE1E9B1EEE2D2C004FFB51 /* AppState.swift in Sources */,
-				11FE1E951EEE2C53004FFB51 /* Session.swift in Sources */,
+				113D080C1EF8990000190655 /* SearchTrack.swift in Sources */,
+				113D080F1EF8990000190655 /* User.swift in Sources */,
 				11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */,
+				113D080D1EF8990000190655 /* Session.swift in Sources */,
 				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,
-				11A38B4B1EEF5DBE00FF3634 /* TopItem.swift in Sources */,
+				113D08101EF8990000190655 /* TopItem.swift in Sources */,
 				11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */,
 				114764931EEF03AC0028936F /* TracksViewController.swift in Sources */,
 				11FE1E891EEE2BE4004FFB51 /* SplashViewController.swift in Sources */,
