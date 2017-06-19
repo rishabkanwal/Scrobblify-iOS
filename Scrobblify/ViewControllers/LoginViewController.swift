@@ -17,8 +17,9 @@ class LoginViewController: UIViewController {
     
     func makeSnackbar(message: String) {
         DispatchQueue.main.async(execute: {
-            let snackbar = TTGSnackbar.init(message: "  " + message, duration: .short)
-            snackbar.backgroundColor = UIColor.red
+            let snackbar = TTGSnackbar.init(message: "  " + message, duration: .middle)
+            snackbar.backgroundColor = UIColor.darkGray
+            snackbar.show()
         })
 
     }
