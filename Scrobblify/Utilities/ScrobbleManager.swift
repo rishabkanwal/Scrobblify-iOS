@@ -22,14 +22,6 @@ class ScrobbleManager {
         musicPlayer.beginGeneratingPlaybackNotifications()
     }
     
-    private func getNowPlaying() -> MPMediaItem?{
-        let nowPlaying = musicPlayer.nowPlayingItem
-        if (nowPlaying?.mediaType == MPMediaType.music && nowPlaying?.title != nil) {
-            return nowPlaying
-        }
-        return nil
-    }
-    
     private func getMbid(track: MPMediaItem, completionHandler: @escaping (String?) -> ()) {
         
         AppState.shared.requestManager.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
@@ -45,13 +37,20 @@ class ScrobbleManager {
         })
     }
     
+    private func getNowPlaying() -> MPMediaItem?{
+        let nowPlaying = musicPlayer.nowPlayingItem
+        if (nowPlaying?.mediaType == MPMediaType.music && nowPlaying?.title != nil) {
+            return nowPlaying
+        }
+        return nil
+    }
     
     private func setNowPlaying(nowPlaying: MPMediaItem?, completionHandler: ((String?) -> Void)? = nil) {
         if (nowPlaying != nil) {
             getMbid(track: nowPlaying!, completionHandler: {
                 mbid in
                 if(mbid != nil) {
-                    AppState.shared.requestManager.updateNowPlaying(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+                    AppState.shared.requestManager.updateNowPlayingTrack(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
                         responseJsonString, error in
                         if (error == nil && completionHandler != nil) {
                             completionHandler!(mbid!)

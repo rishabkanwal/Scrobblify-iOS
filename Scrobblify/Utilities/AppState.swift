@@ -11,14 +11,14 @@ import Foundation
 final class AppState {
     
     static let shared = AppState()
-    let defaults: UserDefaults
+    let defaults = UserDefaults.standard
     let requestManager = RequestManager()
     let scrobbleManager = ScrobbleManager()
+    
     var session: Session?
     var requestsQueue: DispatchQueue
     
     init() {
-        defaults = UserDefaults.standard
         requestsQueue = DispatchQueue(label: "requests")
     }
     

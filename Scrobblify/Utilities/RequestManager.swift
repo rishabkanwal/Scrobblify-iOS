@@ -17,8 +17,7 @@ class RequestManager{
     let sharedSecret = configuration().sharedSecret
     let baseParameters: Parameters = ["api_key": configuration().apiKey]
 
-    
-    func getApiSignature(parameters: Parameters) -> String {
+    private func getApiSignature(parameters: Parameters) -> String {
         var apiParams = ""
         for (parameter, value) in parameters.sorted(by: { $0.0 < $1.0 }) {
             apiParams.append("\(parameter)\(value)")
@@ -26,7 +25,7 @@ class RequestManager{
         return "\(apiParams)\(sharedSecret)".md5()
     }
     
-    func makeApiCall (method: HTTPMethod, parameters: Parameters, completionHandler: @escaping (String?, Error?) -> ()) {
+    private func makeApiCall (method: HTTPMethod, parameters: Parameters, completionHandler: @escaping (String?, Error?) -> ()) {
         var finalParameters = parameters
         finalParameters["format"] = "json"
         Alamofire.request(baseUrl, method: .post, parameters: finalParameters).validate().responseString { response in
@@ -39,6 +38,21 @@ class RequestManager{
             }
         }
 
+    }
+    
+    private func postTrack(method: String, track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
+        var parameters = baseParameters
+        parameters["method"] = method
+        parameters["sk"] = AppState.shared.session!.key!
+        parameters["track"] = track
+        parameters["artist"] = artist
+        parameters["album"] = album
+        parameters["albumArtist"] = albumArtist
+        parameters["mbid"] = mbid
+        parameters["timestamp"] = String(timestamp)
+        parameters["api_sig"] = getApiSignature(parameters: parameters)
+        
+        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
     }
     
     func getSession(username: String, password: String, completionHandler: @escaping (String?, Error?) -> ()) {
@@ -84,21 +98,6 @@ class RequestManager{
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
     }
     
-    
-    func postTrack(method: String, track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
-        var parameters = baseParameters
-        parameters["method"] = method
-        parameters["sk"] = AppState.shared.session!.key!
-        parameters["track"] = track
-        parameters["artist"] = artist
-        parameters["album"] = album
-        parameters["albumArtist"] = albumArtist
-        parameters["mbid"] = mbid
-        parameters["timestamp"] = String(timestamp)
-        parameters["api_sig"] = getApiSignature(parameters: parameters)
-        
-        makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
-    }
     func searchTrack(track:String, artist:String, completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
         parameters["method"] = "track.search"
@@ -113,7 +112,7 @@ class RequestManager{
         postTrack(method: "track.scrobble", track: track, artist: artist, album: album, albumArtist: albumArtist, mbid: mbid, timestamp: timestamp, completionHandler: completionHandler)
     }
     
-    func updateNowPlaying(track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
+    func updateNowPlayingTrack(track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
         postTrack(method: "track.updateNowPlaying", track: track, artist: artist, album: album, albumArtist: albumArtist, mbid: mbid, timestamp: timestamp, completionHandler: completionHandler)
     }
     
