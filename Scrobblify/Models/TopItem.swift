@@ -11,9 +11,8 @@ import ObjectMapper
 
 class TopItem: Mappable {
     
-    var id: String?
+    var mbid: String?
     var name: String?
-    var url: String?
     var playcount: String?
     var rank: String?
     var imageUrlString: String?
@@ -24,9 +23,8 @@ class TopItem: Mappable {
     }
     
     func mapping(map: Map) {
-        id <- map["mbid"]
+        mbid <- map["mbid"]
         name <- map["name"]
-        url <- map["url"]
         playcount <- map["playcount"]
         rank <- map["@attr.rank"]
         imageUrlString <- map["image.2.#text"]

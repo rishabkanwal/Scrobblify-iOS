@@ -11,27 +11,25 @@ import ObjectMapper
 
 class RecentTrack: Mappable {
     
+    var mbid: String?
     var name: String?
-    var id: String?
-    var url: String?
     var artist: String?
     var artistId: String?
     var album: String?
     var albumId: String?
     var imageUrlString: String?
+    var imageUrl: URL?
     var nowPlaying: String?
     var unixTimestamp: String?
     var timestamp: Date?
-    var imageUrl: URL?
     
     required init?(map: Map) {
         
     }
     
     func mapping(map: Map) {
+        mbid <- map["mbid"]
         name <- map["name"]
-        id <- map["mbid"]
-        url <- map["url"]
         artist <- map["artist.#text"]
         artistId <- map["artist.mbid"]
         album <- map["album.#text"]
@@ -39,7 +37,9 @@ class RecentTrack: Mappable {
         imageUrlString <- map["image.2.#text"]
         nowPlaying <- map["@attr.nowplaying"]
         unixTimestamp <- map["date.uts"]
+        
         imageUrl = URL(string: imageUrlString!)
+        
         if !(nowPlaying != nil) {
             timestamp = Date(timeIntervalSince1970: Double(unixTimestamp!)!)
         }
@@ -48,7 +48,6 @@ class RecentTrack: Mappable {
     func getFormattedTimestamp() -> String {
         let dateFormatter = DateFormatter()
         return dateFormatter.timeSince(from: timestamp! as NSDate)
-        
     }
     
 }

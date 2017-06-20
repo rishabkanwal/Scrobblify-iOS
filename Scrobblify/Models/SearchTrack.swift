@@ -11,9 +11,9 @@ import ObjectMapper
 
 class SearchTrack: Mappable {
     
+    var mbid: String?
     var name: String?
     var artist: String?
-    var mbid: String?
     var imageUrlString: String?
     var imageUrl: URL?
     
@@ -22,9 +22,9 @@ class SearchTrack: Mappable {
     }
     
     func mapping(map: Map) {
+        mbid <- map["results.trackmatches.track.0.mbid"]
         name <- map["results.trackmatches.track.0.name"]
         artist <- map["results.trackmatches.track.0.artist"]
-        mbid <- map["results.trackmatches.track.0.mbid"]
         imageUrlString <- map["results.trackmatches.track.0.image.3.#text"]
         imageUrl = URL(string: imageUrlString!)
     }
