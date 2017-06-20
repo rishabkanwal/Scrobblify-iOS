@@ -27,7 +27,7 @@
 		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
 		11AA18871EF7B94C006B014C /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18861EF7B94C006B014C /* Snackbar.swift */; };
-		11AA188B1EF7B96D006B014C /* ScrobbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18891EF7B96D006B014C /* ScrobbleController.swift */; };
+		11AA188B1EF7B96D006B014C /* ScrobbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18891EF7B96D006B014C /* ScrobbleManager.swift */; };
 		11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */; };
 		11AA18911EF7E5C9006B014C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AA18901EF7E5C9006B014C /* MediaPlayer.framework */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
@@ -87,7 +87,7 @@
 		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
 		11AA18861EF7B94C006B014C /* Snackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snackbar.swift; path = Utilities/Snackbar.swift; sourceTree = "<group>"; };
-		11AA18891EF7B96D006B014C /* ScrobbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrobbleController.swift; path = Utilities/ScrobbleController.swift; sourceTree = "<group>"; };
+		11AA18891EF7B96D006B014C /* ScrobbleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrobbleManager.swift; path = Utilities/ScrobbleManager.swift; sourceTree = "<group>"; };
 		11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = Utilities/BackgroundTask.swift; sourceTree = "<group>"; };
 		11AA18901EF7E5C9006B014C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 				11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */,
 				11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */,
 				11FE1E8C1EEE2C53004FFB51 /* RequestManager.swift */,
-				11AA18891EF7B96D006B014C /* ScrobbleController.swift */,
+				11AA18891EF7B96D006B014C /* ScrobbleManager.swift */,
 				11AA18861EF7B94C006B014C /* Snackbar.swift */,
 			);
 			name = Utilities;
@@ -563,7 +563,7 @@
 				11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */,
 				11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
-				11AA188B1EF7B96D006B014C /* ScrobbleController.swift in Sources */,
+				11AA188B1EF7B96D006B014C /* ScrobbleManager.swift in Sources */,
 				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,
 				11FE1E921EEE2C53004FFB51 /* RequestManager.swift in Sources */,
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,

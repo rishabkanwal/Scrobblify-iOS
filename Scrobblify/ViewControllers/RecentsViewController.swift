@@ -28,11 +28,11 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
         updateNowPlaying()
-        AppState.shared.scrobbleController.updateInBackground()
+        AppState.shared.scrobbleManager.updateInBackground()
     }
     
     func updateNowPlaying() {
-        AppState.shared.scrobbleController.update()
+        AppState.shared.scrobbleManager.update()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.updateRecentTracks(isRefresh: true)
         })

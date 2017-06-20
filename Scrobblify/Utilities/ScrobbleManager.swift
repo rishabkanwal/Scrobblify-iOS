@@ -9,7 +9,7 @@
 import Foundation
 import MediaPlayer
 
-class ScrobbleController {
+class ScrobbleManager {
     
     let backgroundTask = BackgroundTask()
     let notificationCenter = NotificationCenter.default
