@@ -21,9 +21,10 @@ class MeViewController: UIViewController {
     @IBOutlet weak var overlayImageView: UIImageView!
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var refreshButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateUserDetails()
     }
 
@@ -32,7 +33,7 @@ class MeViewController: UIViewController {
         updateUserDetails()
     }
     
-    func updateUserDetails() {
+    private func updateUserDetails() {
         AppState.shared.requestManager.getUserInfo(completionHandler: {
             responseJsonString, error in
             if !(error != nil) {

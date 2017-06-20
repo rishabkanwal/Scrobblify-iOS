@@ -14,31 +14,66 @@ import MediaPlayer
 class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var recentsTableView: UITableView!
-    
     var refreshControl: UIRefreshControl!
     
-    var recentTracks: [RecentTrack] = []
-    
     var currentPage = 1
-    
+    var recentTracks: [RecentTrack] = []
     var totalTracks = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
         updateNowPlaying()
         AppState.shared.scrobbleManager.updateInBackground()
     }
     
-    func updateNowPlaying() {
-        AppState.shared.scrobbleManager.update()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            self.updateRecentTracks(isRefresh: true)
-        })
+    func refresh(_ sender: AnyObject){
+        if(recentTracks.count != 0) {
+            updateRecentTracks(isRefresh: true)
+        }
     }
     
-    func updateRecentTracks(isRefresh: Bool) {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recentTracks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let recentTrackCell = tableView.dequeueReusableCell(withIdentifier: "RecentTrackTableViewCell", for: indexPath) as! RecentTrackTableViewCell
+        recentTrackCell.selectionStyle = .none
+        
+        if (indexPath.row < self.recentTracks.count) {
+            let currentRecentTrack = recentTracks[indexPath.row]
+            recentTrackCell.artImageView.layer.cornerRadius = 4;
+            recentTrackCell.nameLabel.text = currentRecentTrack.name!
+            recentTrackCell.artistLabel.text = currentRecentTrack.artist!
+            recentTrackCell.timeLabel.text = (currentRecentTrack.nowPlaying != nil) ? "Playing now" : currentRecentTrack.getFormattedTimestamp()
+            if (currentRecentTrack.imageUrl != nil) {
+                recentTrackCell.artImageView.kf.setImage(with: ImageResource(downloadURL: currentRecentTrack.imageUrl!))
+            } else {
+                recentTrackCell.artImageView.image = UIImage(named: "Disc")
+            }
+            
+        }
+        return recentTrackCell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        loadMoreRecents(scrollView: scrollView)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        loadMoreRecents(scrollView: scrollView)
+    }
+    
+    private func setupRefreshControl(){
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(RecentsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.recentsTableView.insertSubview(refreshControl, at: 0)
+    }
+    
+    private func updateRecentTracks(isRefresh: Bool) {
         AppState.shared.requestsQueue.sync {
             if (isRefresh) {
                 self.currentPage = 1
@@ -75,7 +110,13 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
             })
         }
-        
+    }
+    
+    private func updateNowPlaying() {
+        AppState.shared.scrobbleManager.update()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.updateRecentTracks(isRefresh: true)
+        })
     }
     
     func scrollToTopAndRefresh() {
@@ -86,77 +127,23 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         })
     }
     
-    func showTableFooter() {
+    private func showTableFooter() {
         recentsTableView.tableFooterView?.frame.size.height = 74
         recentsTableView.tableFooterView?.isHidden = false
     }
     
-    func hideTableFooter() {
+    private func hideTableFooter() {
         recentsTableView.tableFooterView?.frame.size.height = 0
         recentsTableView.tableFooterView?.isHidden = true
     }
-    
-    func setupRefreshControl(){
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(RecentsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
-        self.recentsTableView.insertSubview(refreshControl, at: 0)
-    }
-    
-    func refresh(_ sender: AnyObject){
-        if recentTracks.count < totalTracks {
-            
-        }
-        if(recentTracks.count != 0) {
-            updateRecentTracks(isRefresh: true)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return recentTracks.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
-        let recentTrackCell = tableView.dequeueReusableCell(withIdentifier: "RecentTrackTableViewCell", for: indexPath) as! RecentTrackTableViewCell
-        recentTrackCell.selectionStyle = .none
 
-        if (indexPath.row < self.recentTracks.count) {
-            let currentRecentTrack = recentTracks[indexPath.row]
-            recentTrackCell.artImageView.layer.cornerRadius = 4;
-            recentTrackCell.nameLabel.text = currentRecentTrack.name!
-            recentTrackCell.artistLabel.text = currentRecentTrack.artist!
-            recentTrackCell.timeLabel.text = (currentRecentTrack.nowPlaying != nil) ? "Playing now" : currentRecentTrack.getFormattedTimestamp()
-            if (currentRecentTrack.imageUrl != nil) {
-                recentTrackCell.artImageView.kf.setImage(with: ImageResource(downloadURL: currentRecentTrack.imageUrl!))
-            } else {
-                recentTrackCell.artImageView.image = UIImage(named: "Disc")
-            }
-            
-        }
-        
-        return recentTrackCell
-
-    }
-    
-    func loadMoreRecents(scrollView: UIScrollView) {
+    private func loadMoreRecents(scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
         if (maximumOffset - currentOffset <= 74 && recentTracks.count < totalTracks){
             updateRecentTracks(isRefresh: false)
         }
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        loadMoreRecents(scrollView: scrollView)
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        loadMoreRecents(scrollView: scrollView)
     }
     
 }
