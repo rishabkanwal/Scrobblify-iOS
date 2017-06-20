@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class MeViewController: UIViewController {
     
-    
     @IBOutlet weak var mainActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -57,6 +56,5 @@ class MeViewController: UIViewController {
             
         })
     }
-    
     
 }

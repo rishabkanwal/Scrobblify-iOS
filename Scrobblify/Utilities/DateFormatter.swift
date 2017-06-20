@@ -9,6 +9,7 @@
 import Foundation
 
 extension DateFormatter {
+    
     func timeSince(from: NSDate, numericDates: Bool = false) -> String {
         let calendar = Calendar.current
         let now = NSDate()
@@ -74,4 +75,5 @@ extension DateFormatter {
         
         return result
     }
+    
 }

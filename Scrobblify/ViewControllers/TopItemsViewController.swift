@@ -15,19 +15,12 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var timePeriodSegmentedControl: UISegmentedControl!
     @IBOutlet weak var topItemsTableView: UITableView!
     
-    
     var refreshControl: UIRefreshControl!
-    
     var topItems: [TopItem] = []
-    
     var currentPage = 1
-    
     var totalTopItems = -1
-    
     var apiMethod: String?
-    
     var baseJsonObject: String?
-    
     var mainJsonObject: String?
     
     override func viewDidLoad() {
@@ -176,7 +169,6 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         loadMoreTopItems(scrollView: scrollView)
     }
-    
     
 }
 

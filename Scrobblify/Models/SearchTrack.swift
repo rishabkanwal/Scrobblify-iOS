@@ -29,5 +29,4 @@ class SearchTrack: Mappable {
         imageUrl = URL(string: imageUrlString!)
     }
     
-    
 }

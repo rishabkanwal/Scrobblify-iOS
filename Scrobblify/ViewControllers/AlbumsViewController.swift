@@ -11,7 +11,7 @@ import SwiftyJSON
 import Kingfisher
 
 class AlbumsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,7 +24,5 @@ class AlbumsViewController: UIViewController {
             topItemsViewController.mainJsonObject = "album"
         }
     }
-    
-    
     
 }

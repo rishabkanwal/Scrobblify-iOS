@@ -9,7 +9,7 @@
 import Foundation
 
 final class AppState {
-
+    
     static let shared = AppState()
     let defaults: UserDefaults
     let requestManager = RequestManager()

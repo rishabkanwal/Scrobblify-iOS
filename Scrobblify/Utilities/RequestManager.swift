@@ -11,6 +11,7 @@ import Alamofire
 import CryptoSwift
 
 class RequestManager{
+    
     let baseUrl = configuration().baseUrl
     let apiKey = configuration().apiKey
     let sharedSecret = configuration().sharedSecret

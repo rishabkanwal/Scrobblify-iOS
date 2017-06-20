@@ -185,6 +185,7 @@
 			children = (
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
 				11059C991EED422D00E62F27 /* Configuration.swift */,
+				113E6DAF1EED418C009A9E2E /* Info.plist */,
 				113D08051EF898C100190655 /* Models */,
 				11FE1E8A1EEE2BEF004FFB51 /* Utilities */,
 				113D08061EF898CE00190655 /* Views */,
@@ -192,7 +193,6 @@
 				11059CB11EED489200E62F27 /* LaunchScreen.storyboard */,
 				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
 				113E6DAA1EED418C009A9E2E /* Assets.xcassets */,
-				113E6DAF1EED418C009A9E2E /* Info.plist */,
 			);
 			path = Scrobblify;
 			sourceTree = "<group>";

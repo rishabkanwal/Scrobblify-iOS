@@ -53,5 +53,4 @@ class User: Mappable {
         return dateFormatter.string(from: Date(timeIntervalSince1970: registeredDate!))
     }
     
-    
 }
