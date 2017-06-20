@@ -34,7 +34,7 @@ class MeViewController: UIViewController {
     }
     
     func updateUserDetails() {
-        AppState.shared.lastFmRequest.getUserInfo(completionHandler: {
+        AppState.shared.requestManager.getUserInfo(completionHandler: {
             responseJsonString, error in
             if !(error != nil) {
                 let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!).rawString()

@@ -12,7 +12,7 @@ final class AppState {
 
     static let shared = AppState()
     let defaults: UserDefaults
-    let lastFmRequest = LastFmRequest()
+    let requestManager = RequestManager()
     let scrobbleController = ScrobbleController()
     var session: Session?
     var requestsQueue: DispatchQueue

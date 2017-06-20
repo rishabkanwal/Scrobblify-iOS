@@ -32,7 +32,7 @@ class ScrobbleController {
     
     private func getMbid(track: MPMediaItem, completionHandler: @escaping (String?) -> ()) {
         
-        AppState.shared.lastFmRequest.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
+        AppState.shared.requestManager.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
             responseJsonString, error in
             if (!(error != nil)) {
                 let searchTrack = SearchTrack(JSONString: responseJsonString!)
@@ -51,7 +51,7 @@ class ScrobbleController {
             getMbid(track: nowPlaying!, completionHandler: {
                 mbid in
                 if(mbid != nil) {
-                    AppState.shared.lastFmRequest.updateNowPlaying(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+                    AppState.shared.requestManager.updateNowPlaying(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
                         responseJsonString, error in
                         if (error == nil && completionHandler != nil) {
                             completionHandler!(mbid!)
@@ -65,7 +65,7 @@ class ScrobbleController {
     }
     
     private func scrobble(nowPlaying: MPMediaItem?, mbid: String) {
-        AppState.shared.lastFmRequest.scrobbleTrack(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+        AppState.shared.requestManager.scrobbleTrack(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
             responseJsonString, error in
             if(error == nil) {
                 print("Scrobble posted")

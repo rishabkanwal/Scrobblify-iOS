@@ -46,7 +46,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
             } else {
                 self.currentPage += 1
             }
-            AppState.shared.lastFmRequest.getRecentTracks(page: self.currentPage, completionHandler: {
+            AppState.shared.requestManager.getRecentTracks(page: self.currentPage, completionHandler: {
                 responseJsonString, error in
                 if (error == nil) {
                     let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)

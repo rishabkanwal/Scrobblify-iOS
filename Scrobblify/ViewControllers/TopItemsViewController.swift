@@ -71,7 +71,7 @@ class TopItemsViewController: UIViewController, UITableViewDelegate, UITableView
             } else {
                 self.currentPage += 1
             }
-            AppState.shared.lastFmRequest.getTopItems(apiMethod: apiMethod!, page: self.currentPage, timePeriod: self.getCurrentTimePeriod(), completionHandler: {
+            AppState.shared.requestManager.getTopItems(apiMethod: apiMethod!, page: self.currentPage, timePeriod: self.getCurrentTimePeriod(), completionHandler: {
                 responseJsonString, error in
                 if (error == nil) {
                     let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)
