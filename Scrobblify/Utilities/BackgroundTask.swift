@@ -6,6 +6,7 @@
 //  Copyright © 2017 Rishab Kanwal. All rights reserved.
 //
 
+import UIKit
 import AVFoundation
 
 class BackgroundTask {
@@ -34,11 +35,10 @@ class BackgroundTask {
     
     fileprivate func playAudio() {
         do {
-            let bundle = Bundle.main.path(forResource: "blank", ofType: "wav")
-            let alertSound = URL(fileURLWithPath: bundle!)
+            let blankAudio = NSDataAsset(name:"Blank")!
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with:AVAudioSessionCategoryOptions.mixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
-            try self.player = AVAudioPlayer(contentsOf: alertSound)
+            try self.player = AVAudioPlayer(data: blankAudio.data, fileTypeHint: "wav")
             self.player.numberOfLoops = -1
             self.player.volume = 0.01
             self.player.prepareToPlay()

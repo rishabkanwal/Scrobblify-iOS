@@ -29,7 +29,6 @@
 		11AA18871EF7B94C006B014C /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18861EF7B94C006B014C /* Snackbar.swift */; };
 		11AA188B1EF7B96D006B014C /* ScrobbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA18891EF7B96D006B014C /* ScrobbleController.swift */; };
 		11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */; };
-		11AA188F1EF7D81B006B014C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11AA188E1EF7D81B006B014C /* blank.wav */; };
 		11AA18911EF7E5C9006B014C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AA18901EF7E5C9006B014C /* MediaPlayer.framework */; };
 		11FE1E841EEE2BE4004FFB51 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */; };
 		11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */; };
@@ -90,7 +89,6 @@
 		11AA18861EF7B94C006B014C /* Snackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snackbar.swift; path = Utilities/Snackbar.swift; sourceTree = "<group>"; };
 		11AA18891EF7B96D006B014C /* ScrobbleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrobbleController.swift; path = Utilities/ScrobbleController.swift; sourceTree = "<group>"; };
 		11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = Utilities/BackgroundTask.swift; sourceTree = "<group>"; };
-		11AA188E1EF7D81B006B014C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		11AA18901EF7E5C9006B014C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		11FE1E7D1EEE2BE4004FFB51 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsViewController.swift; path = ViewControllers/ArtistsViewController.swift; sourceTree = "<group>"; };
 		11FE1E7F1EEE2BE4004FFB51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
@@ -185,15 +183,14 @@
 		113E6DA01EED418C009A9E2E /* Scrobblify */ = {
 			isa = PBXGroup;
 			children = (
-				113D08061EF898CE00190655 /* Views */,
-				11AA188E1EF7D81B006B014C /* blank.wav */,
 				113E6DA11EED418C009A9E2E /* AppDelegate.swift */,
 				11059C991EED422D00E62F27 /* Configuration.swift */,
 				113D08051EF898C100190655 /* Models */,
-				11FE1E7B1EEE2B03004FFB51 /* ViewControllers */,
 				11FE1E8A1EEE2BEF004FFB51 /* Utilities */,
-				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
+				113D08061EF898CE00190655 /* Views */,
+				11FE1E7B1EEE2B03004FFB51 /* ViewControllers */,
 				11059CB11EED489200E62F27 /* LaunchScreen.storyboard */,
+				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
 				113E6DAA1EED418C009A9E2E /* Assets.xcassets */,
 				113E6DAF1EED418C009A9E2E /* Info.plist */,
 			);
@@ -236,12 +233,12 @@
 		11FE1E8A1EEE2BEF004FFB51 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				11AA18891EF7B96D006B014C /* ScrobbleController.swift */,
 				11FE1E991EEE2D2C004FFB51 /* AppState.swift */,
+				11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */,
 				11FE1E8B1EEE2C53004FFB51 /* DateFormatter.swift */,
 				11FE1E8C1EEE2C53004FFB51 /* LastFmRequest.swift */,
+				11AA18891EF7B96D006B014C /* ScrobbleController.swift */,
 				11AA18861EF7B94C006B014C /* Snackbar.swift */,
-				11AA188C1EF7CD7C006B014C /* BackgroundTask.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -395,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */,
-				11AA188F1EF7D81B006B014C /* blank.wav in Resources */,
 				113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */,
 				11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */,
 			);
