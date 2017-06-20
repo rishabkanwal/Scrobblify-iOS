@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
