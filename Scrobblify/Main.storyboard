@@ -288,7 +288,14 @@
                             <constraint firstAttribute="trailing" secondItem="udL-Jc-IAE" secondAttribute="trailing" id="nZd-Jo-HCG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Me" id="wvf-nI-C3O"/>
+                    <navigationItem key="navigationItem" title="Me" id="wvf-nI-C3O">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="AQq-sN-pry">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="0t6-Rw-UZe" kind="show" identifier="MeToSettingsSegue" id="NxV-oR-6Kz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="joinDateLabel" destination="1Ts-ld-oTn" id="jiI-TV-xHl"/>
@@ -305,6 +312,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXF-S5-5kZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="1455.9220389805098"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="r8w-c3-2mc">
+            <objects>
+                <viewController id="0t6-Rw-UZe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gb4-QZ-aAN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vsx-T8-hWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zdx-99-qet">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="SSK-Iy-tBv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xC-TG-afl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="1456"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rSH-qU-OvO">
@@ -432,9 +458,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jHY-wg-EAg" userLabel="Me Navigation Bar" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="4" title="Me" image="Me" id="EiH-wu-2Hg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WNU-tG-rpl" userLabel="Navigation Bar Item">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="WNU-tG-rpl" userLabel="Navigation Bar Item">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.16078431369999999" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -740,12 +767,13 @@
         <image name="Icon" width="361" height="489"/>
         <image name="Me" width="21" height="25"/>
         <image name="Recents" width="25" height="25"/>
+        <image name="Settings" width="25" height="25"/>
         <image name="Tracks" width="23" height="25"/>
         <image name="User" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x4P-KQ-k0s"/>
-        <segue reference="vCx-EC-WAh"/>
+        <segue reference="tN3-2K-7Tx"/>
+        <segue reference="vcI-Wo-gxg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.16078431369999999" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
