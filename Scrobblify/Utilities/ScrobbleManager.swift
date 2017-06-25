@@ -9,21 +9,38 @@
 import Foundation
 import MediaPlayer
 
+
 class ScrobbleManager {
+    
+    struct NowPlaying {
+        var media: MPMediaItem?
+        var mbid: String?
+        var timePlayed: TimeInterval?
+        var timeLastStarted: Date?
+        var isLastFmNowPlaying: Bool
+    }
     
     let backgroundTask = BackgroundTask()
     let notificationCenter = NotificationCenter.default
     let musicPlayer = MPMusicPlayerController.systemMusicPlayer()
     let musicPlayerController = MPMusicPlayerController()
     
-    var currentNowPlaying: MPMediaItem?
+    var currentNowPlaying: NowPlaying? = nil
     
     init() {
         musicPlayer.beginGeneratingPlaybackNotifications()
     }
     
+    private func getNowPlaying() -> MPMediaItem?{
+        let nowPlayingMedia = musicPlayer.nowPlayingItem
+        if (nowPlayingMedia?.mediaType == MPMediaType.music && nowPlayingMedia?.title != nil) {
+            return nowPlayingMedia
+        }
+        return nil
+    }
+    
+    
     private func getMbid(track: MPMediaItem, completionHandler: @escaping (String?) -> ()) {
-        
         AppState.shared.requestManager.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
             responseJsonString, error in
             if (!(error != nil)) {
@@ -37,70 +54,84 @@ class ScrobbleManager {
         })
     }
     
-    private func getNowPlaying() -> MPMediaItem?{
-        let nowPlaying = musicPlayer.nowPlayingItem
-        if (nowPlaying?.mediaType == MPMediaType.music && nowPlaying?.title != nil) {
-            return nowPlaying
-        }
-        return nil
-    }
-    
-    private func setNowPlaying(nowPlaying: MPMediaItem?, completionHandler: ((String?) -> Void)? = nil) {
-        if (nowPlaying != nil) {
-            getMbid(track: nowPlaying!, completionHandler: {
-                mbid in
-                if(mbid != nil) {
-                    AppState.shared.requestManager.updateNowPlayingTrack(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
-                        responseJsonString, error in
-                        if (error == nil && completionHandler != nil) {
-                            completionHandler!(mbid!)
-                        } else if (completionHandler != nil) {
-                            completionHandler!(nil)
-                        }
-                    })
-                }
-            })
-        }
-    }
-    
-    private func scrobble(nowPlaying: MPMediaItem?, mbid: String) {
-        AppState.shared.requestManager.scrobbleTrack(track: nowPlaying!.title!, artist: nowPlaying!.artist!, album: nowPlaying!.albumTitle!, albumArtist: nowPlaying!.albumArtist!, mbid: mbid, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+    private func setNowPlaying() {
+        AppState.shared.requestManager.updateNowPlayingTrack(track: currentNowPlaying!.media!.title!, artist: currentNowPlaying!.media!.artist!, album: currentNowPlaying!.media!.albumTitle!, albumArtist: currentNowPlaying!.media!.albumArtist!, mbid: currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
             responseJsonString, error in
-            if(error == nil) {
-                print("Scrobble posted")
+            if (error == nil) {
+                self.currentNowPlaying?.isLastFmNowPlaying = true
+                print("Set now playing")
             } else {
                 print(error!)
             }
         })
     }
     
+    private func scrobbleIfThresholdReached() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            print(String(self.currentNowPlaying!.timePlayed!) + " " + String(self.currentNowPlaying!.media!.playbackDuration/10))
+            if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration/10) {
+                AppState.shared.requestManager.scrobbleTrack(track: self.currentNowPlaying!.media!.title!, artist: self.currentNowPlaying!.media!.artist!, album: self.currentNowPlaying!.media!.albumTitle!, albumArtist: self.currentNowPlaying!.media!.albumArtist!, mbid: self.currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+                    responseJsonString, error in
+                    if(error == nil) {
+                        self.currentNowPlaying = nil
+                        print("Scrobble posted")
+                    } else {
+                        print(error!)
+                    }
+                })
+            }
+        })
+        
+    }
     
-    @objc func update() {
-        let nowPlaying = getNowPlaying()
-        if (musicPlayerController.playbackState == MPMusicPlaybackState.playing && self.currentNowPlaying != nowPlaying) {
-            self.currentNowPlaying = nowPlaying
-            setNowPlaying(nowPlaying: nowPlaying, completionHandler: {
+    func setupNewNowPlaying() {
+        let newNowPlayingMedia = getNowPlaying()
+        if (newNowPlayingMedia != nil) {
+            getMbid(track: newNowPlayingMedia!, completionHandler: {
                 mbid in
                 if (mbid != nil) {
-                    let scrobbleInterval = nowPlaying!.playbackDuration / 2
-                    DispatchQueue.main.asyncAfter(deadline: .now() + scrobbleInterval, execute: {
-                        let newNowPlaying = self.getNowPlaying()
-                        if (newNowPlaying == nowPlaying) {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + scrobbleInterval, execute: {
-                                self.scrobble(nowPlaying: nowPlaying!, mbid: mbid!)
-                                self.currentNowPlaying = nil
-                            })
-                        }
-                    })
+                    self.currentNowPlaying = NowPlaying(media:newNowPlayingMedia!, mbid: mbid, timePlayed: 0, timeLastStarted: nil, isLastFmNowPlaying: false)
+                    if (self.musicPlayerController.playbackState == MPMusicPlaybackState.playing) {
+                        self.currentNowPlaying!.timeLastStarted = Date()
+                        self.setNowPlaying()
+                    }
                 }
             })
         }
     }
     
+    @objc func nowPlayingPlaybackStateChanged() {
+        if (currentNowPlaying != nil) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                
+                if (self.musicPlayerController.playbackState == MPMusicPlaybackState.playing) {
+                    if (!self.currentNowPlaying!.isLastFmNowPlaying) {
+                        self.setNowPlaying()
+                    }
+                } else if (self.musicPlayerController.playbackState == MPMusicPlaybackState.paused || self.musicPlayerController.playbackState == MPMusicPlaybackState.interrupted || self.musicPlayerController.playbackState == MPMusicPlaybackState.stopped) {
+                    self.currentNowPlaying!.timePlayed! += Date().timeIntervalSince(self.currentNowPlaying!.timeLastStarted!)
+                    self.scrobbleIfThresholdReached()
+                }
+            })
+        } else {
+            setupNewNowPlaying()
+        }
+    }
+    
+    @objc func nowPlayingItemChanged() {
+        if(currentNowPlaying != nil) {
+            if (currentNowPlaying!.timeLastStarted != nil) {
+                currentNowPlaying!.timePlayed! += Date().timeIntervalSince(currentNowPlaying!.timeLastStarted!)
+                scrobbleIfThresholdReached()
+            }
+        }
+        setupNewNowPlaying()
+    }
+    
     func updateInBackground() {
         backgroundTask.startBackgroundTask()
-        notificationCenter.addObserver(self, selector: #selector(self.update), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: musicPlayer)
-        notificationCenter.addObserver(self, selector: #selector(self.update), name: NSNotification.Name.MPMusicPlayerControllerPlaybackStateDidChange, object: musicPlayer)
+        notificationCenter.addObserver(self, selector: #selector(self.nowPlayingPlaybackStateChanged), name: NSNotification.Name.MPMusicPlayerControllerPlaybackStateDidChange, object: musicPlayer)
+        notificationCenter.addObserver(self, selector: #selector(self.nowPlayingItemChanged), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: musicPlayer)
     }
     
 }
