@@ -68,8 +68,7 @@ class ScrobbleManager {
     
     private func scrobbleIfThresholdReached() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            print(String(self.currentNowPlaying!.timePlayed!) + " " + String(self.currentNowPlaying!.media!.playbackDuration/10))
-            if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration/10) {
+            if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration/2) {
                 AppState.shared.requestManager.scrobbleTrack(track: self.currentNowPlaying!.media!.title!, artist: self.currentNowPlaying!.media!.artist!, album: self.currentNowPlaying!.media!.albumTitle!, albumArtist: self.currentNowPlaying!.media!.albumArtist!, mbid: self.currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
                     responseJsonString, error in
                     if(error == nil) {
