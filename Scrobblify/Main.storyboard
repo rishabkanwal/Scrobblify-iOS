@@ -235,8 +235,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-kF-Iet">
                                         <rect key="frame" x="153" y="210" width="69" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="0.68627450980000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Refresh">
-                                            <color key="titleColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.68627450980000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="refreshClicked:" destination="37E-OF-UW5" eventType="touchUpInside" id="mfZ-Sx-f9S"/>
@@ -395,7 +396,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.83529411764705885" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9W0-yS-k8K" firstAttribute="top" secondItem="70a-1a-gSr" secondAttribute="bottom" constant="3" id="2O3-Ea-IFK"/>
@@ -438,8 +439,8 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Gdf-XA-mEo" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -459,11 +460,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jHY-wg-EAg" userLabel="Me Navigation Bar" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="4" title="Me" image="Me" id="EiH-wu-2Hg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="WNU-tG-rpl" userLabel="Navigation Bar Item">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WNU-tG-rpl" userLabel="Navigation Bar Item">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -480,11 +481,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gdf-XA-mEo" userLabel="Recents Navigation Bar Item" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recents" image="Recents" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="Xan-u8-g8d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Xan-u8-g8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -501,11 +502,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GfL-f0-W3g" userLabel="Artists Navigation Bar Item" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Artists" image="Artists" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="Pbn-Vi-myX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Pbn-Vi-myX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -522,11 +523,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcX-NP-IfO" userLabel="Albums Navigation Bar Item" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Albums" image="Albums" id="kUQ-py-egY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="fjh-Lk-eg5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="fjh-Lk-eg5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -543,11 +544,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mvh-ek-JkO" userLabel="Tracks Navigation Bar Item" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="Tracks" image="Tracks" id="ALZ-AR-FTf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="hYs-Xv-zEj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hYs-Xv-zEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -578,7 +579,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nqy-Ve-1V4" firstAttribute="centerY" secondItem="hlZ-xe-3lH" secondAttribute="centerY" id="nwd-GL-4q8"/>
@@ -648,7 +649,7 @@
                                     <segment title="This Year"/>
                                     <segment title="Overall"/>
                                 </segments>
-                                <color key="tintColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="timeFrameChanged:" destination="aZC-4c-ef2" eventType="valueChanged" id="Yoc-N1-7wm"/>
                                 </connections>
@@ -779,8 +780,8 @@
         <image name="User" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tN3-2K-7Tx"/>
-        <segue reference="vcI-Wo-gxg"/>
+        <segue reference="x4P-KQ-k0s"/>
+        <segue reference="hPK-Q5-JAj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83529411760000005" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
 </document>
