@@ -347,7 +347,7 @@
 				TargetAttributes = {
 					113E6D9D1EED418C009A9E2E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4NLDB2WUE7;
+						DevelopmentTeam = YK77JC3ZB2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -719,7 +719,7 @@
 			baseConfigurationReference = 6FA7DA4065DD93034C94E39C /* Pods-Scrobblify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NLDB2WUE7;
+				DEVELOPMENT_TEAM = YK77JC3ZB2;
 				INFOPLIST_FILE = Scrobblify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rishabkanwal.Scrobblify;
@@ -733,7 +733,7 @@
 			baseConfigurationReference = 41453E41A21011E543C256EF /* Pods-Scrobblify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4NLDB2WUE7;
+				DEVELOPMENT_TEAM = YK77JC3ZB2;
 				INFOPLIST_FILE = Scrobblify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rishabkanwal.Scrobblify;
