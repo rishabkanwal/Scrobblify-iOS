@@ -129,13 +129,13 @@ class ScrobbleManager {
     
     func updateInBackground() {
         let notificationCenter = NotificationCenter.default
-        backgroundTask.startBackgroundTask()
+        backgroundTask.start()
         notificationCenter.addObserver(self, selector: #selector(self.nowPlayingPlaybackStateChanged), name: NSNotification.Name.MPMusicPlayerControllerPlaybackStateDidChange, object: musicPlayer)
         notificationCenter.addObserver(self, selector: #selector(self.nowPlayingItemChanged), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: musicPlayer)
     }
     
     func stopUpdateInBackground() {
-        backgroundTask.stopBackgroundTask()
+        backgroundTask.stop()
     }
     
 }

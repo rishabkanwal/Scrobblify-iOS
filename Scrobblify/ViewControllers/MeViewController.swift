@@ -29,16 +29,7 @@ class MeViewController: UIViewController {
     }
     
     @IBAction func settingsClicked(_ sender: Any) {
-        guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
-            return
-        }
-        
-        if UIApplication.shared.canOpenURL(settingsUrl) {
-            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                print("Settings opened: \(success)") // Prints true
-            })
-        }
-        
+        openSettings()
     }
     
     @IBAction func refreshClicked(_ sender: Any) {

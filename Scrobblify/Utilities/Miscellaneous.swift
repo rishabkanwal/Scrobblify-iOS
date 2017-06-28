@@ -16,3 +16,15 @@ func makeSnackbar(message: String) {
         snackbar.show()
     })
 }
+
+func openSettings() {
+    guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+        return
+    }
+    
+    if UIApplication.shared.canOpenURL(settingsUrl) {
+        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+            print("Settings opened: \(success)")
+        })
+    }
+}
