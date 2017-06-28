@@ -22,17 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="XCw-UU-9fA">
-                                <rect key="frame" x="140" y="255" width="115" height="156"/>
+                                <rect key="frame" x="110" y="255.5" width="155" height="155"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="156" id="1Kt-62-pPx"/>
-                                    <constraint firstAttribute="width" constant="115" id="CJP-tb-XP3"/>
+                                    <constraint firstAttribute="height" constant="155" id="1Kt-62-pPx"/>
+                                    <constraint firstAttribute="width" constant="155" id="CJP-tb-XP3"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.68627450980392157" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XCw-UU-9fA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="10" id="SKM-Ay-vhB"/>
+                            <constraint firstItem="XCw-UU-9fA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SKM-Ay-vhB"/>
                             <constraint firstItem="XCw-UU-9fA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qNB-OL-5gR"/>
                         </constraints>
                     </view>
@@ -43,7 +43,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="361" height="489"/>
+        <image name="Icon" width="240" height="240"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

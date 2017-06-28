@@ -23,7 +23,7 @@
 		113E6DB91EED418C009A9E2E /* ScrobblifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DB81EED418C009A9E2E /* ScrobblifyTests.swift */; };
 		113E6DC41EED418C009A9E2E /* ScrobblifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */; };
 		114764931EEF03AC0028936F /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114764921EEF03AC0028936F /* TracksViewController.swift */; };
-		11A15B571EFFF5F4002E5B36 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A15B561EFFF5F4002E5B36 /* SettingsViewController.swift */; };
+		116A2FFF1F02B007002C9B02 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 116A2FFE1F02B007002C9B02 /* Settings.bundle */; };
 		11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */; };
 		11A38B4E1EEF952B00FF3634 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A38B4D1EEF952B00FF3634 /* MeViewController.swift */; };
 		11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */; };
@@ -84,7 +84,7 @@
 		113E6DC31EED418C009A9E2E /* ScrobblifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrobblifyUITests.swift; sourceTree = "<group>"; };
 		113E6DC51EED418C009A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114764921EEF03AC0028936F /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksViewController.swift; path = ViewControllers/TracksViewController.swift; sourceTree = "<group>"; };
-		11A15B561EFFF5F4002E5B36 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ViewControllers/SettingsViewController.swift; sourceTree = "<group>"; };
+		116A2FFE1F02B007002C9B02 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItemsViewController.swift; path = ViewControllers/TopItemsViewController.swift; sourceTree = "<group>"; };
 		11A38B4D1EEF952B00FF3634 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ViewControllers/MeViewController.swift; sourceTree = "<group>"; };
 		11A61D931EEEF08800FAD922 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = ViewControllers/AlbumsViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +195,7 @@
 				11059CB11EED489200E62F27 /* LaunchScreen.storyboard */,
 				11059CAD1EED44FF00E62F27 /* Main.storyboard */,
 				113E6DAA1EED418C009A9E2E /* Assets.xcassets */,
+				116A2FFE1F02B007002C9B02 /* Settings.bundle */,
 			);
 			path = Scrobblify;
 			sourceTree = "<group>";
@@ -228,7 +229,6 @@
 				11FE1E821EEE2BE4004FFB51 /* SplashViewController.swift */,
 				11A38B471EEF3A0000FF3634 /* TopItemsViewController.swift */,
 				114764921EEF03AC0028936F /* TracksViewController.swift */,
-				11A15B561EFFF5F4002E5B36 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116A2FFF1F02B007002C9B02 /* Settings.bundle in Resources */,
 				11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */,
 				113E6DAB1EED418C009A9E2E /* Assets.xcassets in Resources */,
 				11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */,
@@ -567,7 +568,6 @@
 				11A38B481EEF3A0000FF3634 /* TopItemsViewController.swift in Sources */,
 				113E6DA21EED418C009A9E2E /* AppDelegate.swift in Sources */,
 				11AA188B1EF7B96D006B014C /* ScrobbleManager.swift in Sources */,
-				11A15B571EFFF5F4002E5B36 /* SettingsViewController.swift in Sources */,
 				11A61D941EEEF08800FAD922 /* AlbumsViewController.swift in Sources */,
 				11FE1E921EEE2C53004FFB51 /* RequestManager.swift in Sources */,
 				11059CA31EED422D00E62F27 /* Configuration.swift in Sources */,

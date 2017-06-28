@@ -21,13 +21,26 @@ class MeViewController: UIViewController {
     @IBOutlet weak var overlayImageView: UIImageView!
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var refreshButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUserDetails()
     }
-
+    
+    @IBAction func settingsClicked(_ sender: Any) {
+        guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)") // Prints true
+            })
+        }
+        
+    }
+    
     @IBAction func refreshClicked(_ sender: Any) {
         self.refreshButton.isHidden = true
         updateUserDetails()
