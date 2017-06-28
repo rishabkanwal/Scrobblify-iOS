@@ -18,8 +18,27 @@ final class AppState {
     var session: Session?
     var requestsQueue: DispatchQueue
     
+    var scrobblingEnabled = false
+    var scrobblePercentage = 0.5
+    
     init() {
         requestsQueue = DispatchQueue(label: "requests")
+        retrieveScrobbleSettings(shouldSetup: false)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppState.settingsChanged), name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    private func retrieveScrobbleSettings(shouldSetup: Bool) {
+        scrobblingEnabled = defaults.bool(forKey: "scrobbling_enabled")
+        let uncheckedScrobblePercentage = defaults.double(forKey: "scrobble_percentage")
+        scrobblePercentage = uncheckedScrobblePercentage == 0 ? scrobblePercentage : uncheckedScrobblePercentage
+        if (scrobblingEnabled) {
+            if(shouldSetup) {
+                scrobbleManager.setupNewNowPlaying()
+            }
+            scrobbleManager.updateInBackground()
+        } else {
+            scrobbleManager.stopUpdateInBackground()
+        }
     }
     
     func saveSessionData() {
@@ -39,6 +58,27 @@ final class AppState {
         if let subscribers = defaults.string(forKey: "subscribers") {
             session!.subscribers = Int(subscribers)
         }
+    }
+    
+    @objc private func settingsChanged() {
+        retrieveScrobbleSettings(shouldSetup: true)
+    }
+    
+    func enableScrobbling() {
+        defaults.set(true, forKey: "scrobbling_enabled")
+        scrobbleManager.setupNewNowPlaying()
+    }
+    
+    func disableScrobbling() {
+        defaults.set(false, forKey: "scrobbling_enabled")
+    }
+    
+    func shouldShowEnableScrobblingDialog() -> Bool {
+        return !(defaults.bool(forKey: "disable_enable_scrobbling_dialog"))
+    }
+    
+    func disableEnableScrobblingDialog() {
+        defaults.set(true, forKey: "disable_enable_scrobbling_dialog")
     }
     
 }

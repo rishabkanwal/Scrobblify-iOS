@@ -21,7 +21,6 @@ class ScrobbleManager {
     }
     
     let backgroundTask = BackgroundTask()
-    let notificationCenter = NotificationCenter.default
     let musicPlayer = MPMusicPlayerController.systemMusicPlayer()
     let musicPlayerController = MPMusicPlayerController()
     
@@ -67,8 +66,9 @@ class ScrobbleManager {
     }
     
     private func scrobbleIfThresholdReached() {
+        let scrobblePercentage = AppState.shared.scrobblePercentage
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration/2) {
+            if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration * scrobblePercentage) {
                 AppState.shared.requestManager.scrobbleTrack(track: self.currentNowPlaying!.media!.title!, artist: self.currentNowPlaying!.media!.artist!, album: self.currentNowPlaying!.media!.albumTitle!, albumArtist: self.currentNowPlaying!.media!.albumArtist!, mbid: self.currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
                     responseJsonString, error in
                     if(error == nil) {
@@ -128,9 +128,14 @@ class ScrobbleManager {
     }
     
     func updateInBackground() {
+        let notificationCenter = NotificationCenter.default
         backgroundTask.startBackgroundTask()
         notificationCenter.addObserver(self, selector: #selector(self.nowPlayingPlaybackStateChanged), name: NSNotification.Name.MPMusicPlayerControllerPlaybackStateDidChange, object: musicPlayer)
         notificationCenter.addObserver(self, selector: #selector(self.nowPlayingItemChanged), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: musicPlayer)
+    }
+    
+    func stopUpdateInBackground() {
+        backgroundTask.stopBackgroundTask()
     }
     
 }

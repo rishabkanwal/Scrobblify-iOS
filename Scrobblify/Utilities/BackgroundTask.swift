@@ -13,15 +13,19 @@ class BackgroundTask {
     
     var player = AVAudioPlayer()
     var timer = Timer()
+    var backgroundTaskRunning = false
     
     func startBackgroundTask() {
         NotificationCenter.default.addObserver(self, selector: #selector(audioInterupted), name: NSNotification.Name.AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
         self.playAudio()
+        backgroundTaskRunning = true
     }
     
     func stopBackgroundTask() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
-        player.stop()
+        if (backgroundTaskRunning) {
+            NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
+            player.stop()
+        }
     }
     
     @objc fileprivate func audioInterupted(_ notification: Notification) {

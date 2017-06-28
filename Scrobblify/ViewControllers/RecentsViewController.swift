@@ -26,7 +26,9 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
         updateNowPlaying()
-        AppState.shared.scrobbleManager.updateInBackground()
+        showEnableScrobblingDialogIfNeeded()
+        NotificationCenter.default.addObserver(self, selector: #selector(showEnablePermissionsDialogIfNeeded), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        showEnablePermissionsDialogIfNeeded()
     }
     
     func refresh(_ sender: AnyObject){
@@ -113,10 +115,12 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     private func updateNowPlaying() {
-        AppState.shared.scrobbleManager.setupNewNowPlaying()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            self.updateRecentTracks(isRefresh: true)
-        })
+        if (AppState.shared.scrobblingEnabled) {
+            AppState.shared.scrobbleManager.setupNewNowPlaying()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.updateRecentTracks(isRefresh: true)
+            })
+        }
     }
     
     func scrollToTopAndRefresh() {
@@ -144,6 +148,51 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         if (maximumOffset - currentOffset <= 74 && recentTracks.count < totalTracks){
             updateRecentTracks(isRefresh: false)
         }
+    }
+    
+    private func showEnableScrobblingDialogIfNeeded() {
+        if(AppState.shared.shouldShowEnableScrobblingDialog()) {
+            let alert = UIAlertController(title: "Enable Apple Music Scrobbling?", message: "Would you like to enable scrobbling for Apple Music? You may be asked to give Scrobblify permissions to access Media & Apple Music", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: {
+                action in
+                AppState.shared.disableEnableScrobblingDialog()
+            }))
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: {
+                action in
+                AppState.shared.enableScrobbling()
+                AppState.shared.disableEnableScrobblingDialog()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @objc private func showEnablePermissionsDialogIfNeeded() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            if (MPMediaLibrary.authorizationStatus() != .authorized && AppState.shared.scrobblingEnabled && !AppState.shared.shouldShowEnableScrobblingDialog()) {
+                let alert = UIAlertController(title: "Could not access Media & Apple Music Permissions", message: "For Scrobbling to work you need to allow Scrobblify to access Media & Apple Music in settings", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Go to Settings", style: UIAlertActionStyle.default, handler: {
+                    action in
+                    guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                        return
+                    }
+                    
+                    if UIApplication.shared.canOpenURL(settingsUrl) {
+                        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                            print("Settings opened: \(success)")
+                        })
+                    }
+                }))
+                alert.addAction(UIAlertAction(title: "Disable Scrobbling", style: UIAlertActionStyle.default, handler: {
+                    action in
+                    AppState.shared.disableScrobbling()
+                }))
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default, handler: {
+                    action in
+                    self.showEnablePermissionsDialogIfNeeded()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
 }
