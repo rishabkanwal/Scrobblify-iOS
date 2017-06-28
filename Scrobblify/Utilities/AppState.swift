@@ -66,7 +66,7 @@ final class AppState {
     
     func enableScrobbling() {
         defaults.set(true, forKey: "scrobbling_enabled")
-        scrobbleManager.setupNewNowPlaying()
+        retrieveScrobbleSettings(shouldSetup: true)
     }
     
     func disableScrobbling() {
