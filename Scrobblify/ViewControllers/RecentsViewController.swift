@@ -95,7 +95,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
                             self.recentTracks.append(newRecentTrack)
                         }
                     }
-                    if (self.recentTracks.count == self.totalTracks) {
+                    if (self.recentTracks.count >= self.totalTracks) {
                         self.hideTableFooter()
                     } else {
                         self.showTableFooter()
