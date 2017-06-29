@@ -54,7 +54,9 @@ class MeViewController: UIViewController {
                     self.playsLabel.text = user!.getFormattedPlaycount() + " total plays"
                     self.subscribersLabel.text = user!.subscribers! + " subscribers"
                     self.joinDateLabel.text = "Joined " + user!.getFormattedRegisterDate()
-                    self.pictureImageView.kf.setImage(with: ImageResource(downloadURL: user!.imageUrl!))
+                    if (user?.imageUrl != nil) {
+                        self.pictureImageView.kf.setImage(with: ImageResource(downloadURL: user!.imageUrl!))
+                    }
                     
                 })
             }
