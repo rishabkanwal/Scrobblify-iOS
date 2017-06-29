@@ -100,7 +100,7 @@ class ScrobbleManager {
     }
     
     @objc func nowPlayingPlaybackStateChanged() {
-        if (currentNowPlaying != nil) {
+        if (currentNowPlaying?.timeLastStarted != nil) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                 
                 if (self.musicPlayerController.playbackState == MPMusicPlaybackState.playing) {
@@ -118,7 +118,7 @@ class ScrobbleManager {
     }
     
     @objc func nowPlayingItemChanged() {
-        if(currentNowPlaying != nil) {
+        if(currentNowPlaying?.timeLastStarted != nil) {
             if (currentNowPlaying!.timeLastStarted != nil) {
                 currentNowPlaying!.timePlayed! += Date().timeIntervalSince(currentNowPlaying!.timeLastStarted!)
                 scrobbleIfThresholdReached()
