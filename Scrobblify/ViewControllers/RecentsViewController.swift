@@ -159,7 +159,7 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @objc private func showEnablePermissionsDialogIfNeeded() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
             if (MPMediaLibrary.authorizationStatus() != .authorized && AppState.shared.scrobblingEnabled && !AppState.shared.shouldShowEnableScrobblingDialog()) {
-                let alert = UIAlertController(title: "Could not access Media & Apple Music Permissions", message: "For Scrobbling to work you need to allow Scrobblify to access Media & Apple Music in settings", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Could not access Media & Apple Music Permissions", message: "For Scrobbling to work you need to allow Scrobblify to access Media & Apple Music in settings, if you don't  see the permissions in settings try playing some music", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Go to Settings", style: UIAlertActionStyle.default, handler: {
                     action in
                     openSettings()
