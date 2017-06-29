@@ -25,7 +25,6 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
-        updateNowPlaying()
         showEnableScrobblingDialogIfNeeded()
         NotificationCenter.default.addObserver(self, selector: #selector(showEnablePermissionsDialogIfNeeded), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         showEnablePermissionsDialogIfNeeded()
@@ -110,15 +109,6 @@ class RecentsViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.hideTableFooter()
                 }
                 
-            })
-        }
-    }
-    
-    private func updateNowPlaying() {
-        if (AppState.shared.scrobblingEnabled) {
-            AppState.shared.scrobbleManager.setupNewNowPlaying()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.updateRecentTracks(isRefresh: true)
             })
         }
     }
