@@ -11,7 +11,7 @@
 		11059CAE1EED44FF00E62F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CAD1EED44FF00E62F27 /* Main.storyboard */; };
 		11059CB21EED489200E62F27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11059CB11EED489200E62F27 /* LaunchScreen.storyboard */; };
 		113D080C1EF8990000190655 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08071EF8990000190655 /* SearchTrack.swift */; };
-		113D080D1EF8990000190655 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08081EF8990000190655 /* Session.swift */; };
+		113D080D1EF8990000190655 /* LastFmSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08081EF8990000190655 /* LastFmSession.swift */; };
 		113D080E1EF8990000190655 /* RecentTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D08091EF8990000190655 /* RecentTrack.swift */; };
 		113D080F1EF8990000190655 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D080A1EF8990000190655 /* User.swift */; };
 		113D08101EF8990000190655 /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D080B1EF8990000190655 /* TopItem.swift */; };
@@ -66,7 +66,7 @@
 		11059CB11EED489200E62F27 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		112B76F80692699F2AE89A9C /* Pods-ScrobblifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrobblifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrobblifyUITests/Pods-ScrobblifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		113D08071EF8990000190655 /* SearchTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTrack.swift; path = Models/SearchTrack.swift; sourceTree = "<group>"; };
-		113D08081EF8990000190655 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Models/Session.swift; sourceTree = "<group>"; };
+		113D08081EF8990000190655 /* LastFmSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFmSession.swift; path = Models/LastFmSession.swift; sourceTree = "<group>"; };
 		113D08091EF8990000190655 /* RecentTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentTrack.swift; path = Models/RecentTrack.swift; sourceTree = "<group>"; };
 		113D080A1EF8990000190655 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		113D080B1EF8990000190655 /* TopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopItem.swift; path = Models/TopItem.swift; sourceTree = "<group>"; };
@@ -141,9 +141,9 @@
 		113D08051EF898C100190655 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				113D08081EF8990000190655 /* LastFmSession.swift */,
 				113D08091EF8990000190655 /* RecentTrack.swift */,
 				113D08071EF8990000190655 /* SearchTrack.swift */,
-				113D08081EF8990000190655 /* Session.swift */,
 				113D080A1EF8990000190655 /* User.swift */,
 				113D080B1EF8990000190655 /* TopItem.swift */,
 			);
@@ -578,7 +578,7 @@
 				113D080C1EF8990000190655 /* SearchTrack.swift in Sources */,
 				113D080F1EF8990000190655 /* User.swift in Sources */,
 				11AA188D1EF7CD7C006B014C /* BackgroundTask.swift in Sources */,
-				113D080D1EF8990000190655 /* Session.swift in Sources */,
+				113D080D1EF8990000190655 /* LastFmSession.swift in Sources */,
 				11FE1E871EEE2BE4004FFB51 /* RecentsViewController.swift in Sources */,
 				113D08101EF8990000190655 /* TopItem.swift in Sources */,
 				11FE1E861EEE2BE4004FFB51 /* LoginViewController.swift in Sources */,

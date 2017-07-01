@@ -15,7 +15,7 @@ final class AppState {
     let lastFmRequestManager = LastFmRequestManager()
     let scrobbleManager = ScrobbleManager()
     
-    var session: Session?
+    var lastFmSession: LastFmSession?
     var requestsQueue: DispatchQueue
     
     var scrobblingEnabled = false
@@ -42,21 +42,21 @@ final class AppState {
     }
     
     func saveSessionData() {
-        self.defaults.set(session!.key, forKey: "sessionKey")
-        self.defaults.set(session!.username, forKey: "username")
-        self.defaults.set(String(session!.subscribers!), forKey: "subscribers")
+        self.defaults.set(lastFmSession!.key, forKey: "last_fm_session_key")
+        self.defaults.set(lastFmSession!.username, forKey: "last_fm_username")
+        self.defaults.set(String(lastFmSession!.subscribers!), forKey: "last_fm_subscribers")
     }
     
     func retrieveSessionData() {
-        session = Session()
-        if let key = defaults.string(forKey: "sessionKey") {
-            session!.key = key
+        lastFmSession = LastFmSession()
+        if let key = defaults.string(forKey: "last_fm_session_key") {
+            lastFmSession!.key = key
         }
-        if let username = defaults.string(forKey: "username") {
-            session!.username = username
+        if let username = defaults.string(forKey: "last_fm_username") {
+            lastFmSession!.username = username
         }
-        if let subscribers = defaults.string(forKey: "subscribers") {
-            session!.subscribers = Int(subscribers)
+        if let subscribers = defaults.string(forKey: "last_fm_subscribers") {
+            lastFmSession!.subscribers = Int(subscribers)
         }
     }
     

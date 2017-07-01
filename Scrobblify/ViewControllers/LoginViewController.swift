@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
         AppState.shared.lastFmRequestManager.getSession(username: username, password: password, completionHandler: {
             responseJsonString, error in
             if !(error != nil) {
-                AppState.shared.session = Session(JSONString: responseJsonString!)!
+                AppState.shared.lastFmSession = LastFmSession(JSONString: responseJsonString!)!
                 AppState.shared.saveSessionData()
                 self.segueToTabBarController()
             } else {

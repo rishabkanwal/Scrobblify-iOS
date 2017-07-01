@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Session: Mappable {
+class LastFmSession: Mappable {
     
     var key: String?
     var username: String?

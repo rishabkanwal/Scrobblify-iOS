@@ -13,7 +13,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AppState.shared.retrieveSessionData()
-        if (AppState.shared.session!.key == nil) {
+        if (AppState.shared.lastFmSession!.key == nil) {
             segueSplashToLogin()
         } else {
             segueSplashToTabBarController()

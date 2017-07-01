@@ -43,7 +43,7 @@ class LastFmRequestManager{
     private func postTrack(method: String, track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
         parameters["method"] = method
-        parameters["sk"] = AppState.shared.session!.key!
+        parameters["sk"] = AppState.shared.lastFmSession!.key!
         parameters["track"] = track
         parameters["artist"] = artist
         parameters["album"] = album
@@ -69,7 +69,7 @@ class LastFmRequestManager{
     func getUserInfo(completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
         parameters["method"] = "user.getInfo"
-        parameters["user"] = AppState.shared.session!.username!
+        parameters["user"] = AppState.shared.lastFmSession!.username!
         
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
         
@@ -78,7 +78,7 @@ class LastFmRequestManager{
     func getRecentTracks(page: Int, completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
         parameters["method"] = "user.getRecentTracks"
-        parameters["user"] = AppState.shared.session!.username!
+        parameters["user"] = AppState.shared.lastFmSession!.username!
         parameters["limit"] = 200
         parameters["page"] = page
         
@@ -89,7 +89,7 @@ class LastFmRequestManager{
     func getTopItems(apiMethod: String, page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
         parameters["method"] = apiMethod
-        parameters["user"] = AppState.shared.session!.username!
+        parameters["user"] = AppState.shared.lastFmSession!.username!
         parameters["limit"] = 200
         parameters["page"] = page
         parameters["period"] = timePeriod
