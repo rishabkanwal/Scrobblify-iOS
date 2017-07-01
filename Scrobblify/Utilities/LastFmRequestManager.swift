@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import CryptoSwift
 
-class RequestManager{
+class LastFmRequestManager{
     
-    let baseUrl = configuration().baseUrl
+    let baseUrl = configuration().lastFmBaseUrl
     let apiKey = configuration().apiKey
     let sharedSecret = configuration().sharedSecret
     let baseParameters: Parameters = ["api_key": configuration().apiKey]

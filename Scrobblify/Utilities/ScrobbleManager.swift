@@ -40,7 +40,7 @@ class ScrobbleManager {
     
     
     private func getMbid(track: MPMediaItem, completionHandler: @escaping (String?) -> ()) {
-        AppState.shared.requestManager.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
+        AppState.shared.lastFmRequestManager.searchTrack(track: track.title!, artist: track.artist!, completionHandler: {
             responseJsonString, error in
             if (!(error != nil)) {
                 let searchTrack = SearchTrack(JSONString: responseJsonString!)
@@ -54,7 +54,7 @@ class ScrobbleManager {
     }
     
     private func setNowPlaying() {
-        AppState.shared.requestManager.updateNowPlayingTrack(track: currentNowPlaying!.media!.title!, artist: currentNowPlaying!.media!.artist!, album: currentNowPlaying!.media!.albumTitle!, albumArtist: currentNowPlaying!.media!.albumArtist!, mbid: currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+        AppState.shared.lastFmRequestManager.updateNowPlayingTrack(track: currentNowPlaying!.media!.title!, artist: currentNowPlaying!.media!.artist!, album: currentNowPlaying!.media!.albumTitle!, albumArtist: currentNowPlaying!.media!.albumArtist!, mbid: currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
             responseJsonString, error in
             if (error == nil) {
                 self.currentNowPlaying?.isLastFmNowPlaying = true
@@ -69,7 +69,7 @@ class ScrobbleManager {
         let scrobblePercentage = AppState.shared.scrobblePercentage
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             if (self.currentNowPlaying!.timePlayed! >= self.currentNowPlaying!.media!.playbackDuration * scrobblePercentage) {
-                AppState.shared.requestManager.scrobbleTrack(track: self.currentNowPlaying!.media!.title!, artist: self.currentNowPlaying!.media!.artist!, album: self.currentNowPlaying!.media!.albumTitle!, albumArtist: self.currentNowPlaying!.media!.albumArtist!, mbid: self.currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
+                AppState.shared.lastFmRequestManager.scrobbleTrack(track: self.currentNowPlaying!.media!.title!, artist: self.currentNowPlaying!.media!.artist!, album: self.currentNowPlaying!.media!.albumTitle!, albumArtist: self.currentNowPlaying!.media!.albumArtist!, mbid: self.currentNowPlaying!.mbid!, timestamp: Int(Date().timeIntervalSince1970), completionHandler: {
                     responseJsonString, error in
                     if(error == nil) {
                         self.currentNowPlaying = nil

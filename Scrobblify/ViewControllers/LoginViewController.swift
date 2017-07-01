@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
 
     private func startSession(username: String, password: String) {
         self.loginActivityIndicator.startAnimating()
-        AppState.shared.requestManager.getSession(username: username, password: password, completionHandler: {
+        AppState.shared.lastFmRequestManager.getSession(username: username, password: password, completionHandler: {
             responseJsonString, error in
             if !(error != nil) {
                 AppState.shared.session = Session(JSONString: responseJsonString!)!
