@@ -37,7 +37,6 @@ class LastFmRequestManager{
                 completionHandler(nil, error)
             }
         }
-
     }
     
     private func postTrack(method: String, track: String, artist: String, album: String, albumArtist: String, mbid: String, timestamp: Int, completionHandler: @escaping (String?, Error?) -> ()) {
@@ -63,7 +62,6 @@ class LastFmRequestManager{
         parameters["api_sig"] = getApiSignature(parameters: parameters)
         
         makeApiCall(method: .post, parameters: parameters, completionHandler: completionHandler)
-        
     }
     
     func getUserInfo(completionHandler: @escaping (String?, Error?) -> ()) {
@@ -72,7 +70,6 @@ class LastFmRequestManager{
         parameters["user"] = AppState.shared.lastFmSession!.username!
         
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
-        
     }
     
     func getRecentTracks(page: Int, completionHandler: @escaping (String?, Error?) -> ()) {
@@ -83,7 +80,6 @@ class LastFmRequestManager{
         parameters["page"] = page
         
         makeApiCall(method: .get, parameters: parameters, completionHandler: completionHandler)
-        
     }
     
     func getTopItems(apiMethod: String, page: Int, timePeriod: String, completionHandler: @escaping (String?, Error?) -> ()) {
