@@ -10,9 +10,10 @@ import Foundation
 import TTGSnackbar
 
 func makeSnackbar(message: String) {
+    let snackbar = TTGSnackbar.init(message: "  " + message, duration: .middle)
+    snackbar.backgroundColor = UIColor.darkGray
+
     DispatchQueue.main.async(execute: {
-        let snackbar = TTGSnackbar.init(message: "  " + message, duration: .middle)
-        snackbar.backgroundColor = UIColor.darkGray
         snackbar.show()
     })
 }
@@ -23,8 +24,6 @@ func openSettings() {
     }
     
     if UIApplication.shared.canOpenURL(settingsUrl) {
-        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-            print("Settings opened: \(success)")
-        })
+        UIApplication.shared.open(settingsUrl)
     }
 }
