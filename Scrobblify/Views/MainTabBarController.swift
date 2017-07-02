@@ -13,10 +13,10 @@ class MainTabBarController: UITabBarController {
     var currentItemTag = 0
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if (currentItemTag == item.tag) {
-            if (currentItemTag == 0) {
+        if currentItemTag == item.tag {
+            if currentItemTag == 0 {
                 (selectedViewController?.childViewControllers[0] as! RecentsViewController).scrollToTopAndRefresh()
-            } else if (item.tag < 4){
+            } else if item.tag < 4 {
                 (selectedViewController?.childViewControllers[0].childViewControllers[0] as! TopItemsViewController).scrollToTopAndRefresh()
             }
         } else {
