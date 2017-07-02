@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class User: Mappable {
+class User {
     
     var username: String?
     var imageUrlString: String?
@@ -22,22 +22,7 @@ class User: Mappable {
     var playlistCount: String?
     var registeredDate: Double?
     
-    required init?(map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
-        username <- map["user.name"]
-        country <- map["user.country"]
-        age <- map["user.age"]
-        gender <- map["user.gender"]
-        subscribers <- map["user.subscriber"]
-        playcount <- map["user.playcount"]
-        playlistCount <- map["user.playlists"]
-        registeredDate <- map["user.registered.#text"]
-        imageUrlString <- map["user.image.3.#text"]
-        imageUrl = URL(string: imageUrlString!)
-    }
+    required init?(map: Map) {}
     
     func getFormattedPlaycount() -> String {
         let numberFormatter = NumberFormatter()
@@ -49,6 +34,24 @@ class User: Mappable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.string(from: Date(timeIntervalSince1970: registeredDate!))
+    }
+    
+}
+
+extension User: Mappable {
+    
+    func mapping(map: Map) {
+        username <- map["user.name"]
+        country <- map["user.country"]
+        age <- map["user.age"]
+        gender <- map["user.gender"]
+        subscribers <- map["user.subscriber"]
+        playcount <- map["user.playcount"]
+        playlistCount <- map["user.playlists"]
+        registeredDate <- map["user.registered.#text"]
+        imageUrlString <- map["user.image.3.#text"]
+        
+        imageUrl = URL(string: imageUrlString!)
     }
     
 }

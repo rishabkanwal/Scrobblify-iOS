@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class SearchTrack: Mappable {
+class SearchTrack {
     
     var mbid: String?
     var name: String?
@@ -17,9 +17,11 @@ class SearchTrack: Mappable {
     var imageUrlString: String?
     var imageUrl: URL?
     
-    required init?(map: Map) {
-        
-    }
+    required init?(map: Map) {}
+    
+}
+
+extension SearchTrack: Mappable {
     
     func mapping(map: Map) {
         mbid <- map["results.trackmatches.track.0.mbid"]

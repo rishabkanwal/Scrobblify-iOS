@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class RecentTrack: Mappable {
+class RecentTrack {
     
     var mbid: String?
     var name: String?
@@ -23,11 +23,18 @@ class RecentTrack: Mappable {
     var unixTimestamp: String?
     var timestamp: Date?
     
-    required init?(map: Map) {
-        
+    required init?(map: Map) {}
+    
+    func getFormattedTimestamp() -> String {
+        let dateFormatter = DateFormatter()
+        return dateFormatter.timeSince(from: timestamp! as NSDate)
     }
     
-    func mapping(map: Map) {
+}
+
+extension RecentTrack: Mappable {
+    
+    internal func mapping(map: Map) {
         mbid <- map["mbid"]
         name <- map["name"]
         artist <- map["artist.#text"]
@@ -40,14 +47,9 @@ class RecentTrack: Mappable {
         
         imageUrl = URL(string: imageUrlString!)
         
-        if !(nowPlaying != nil) {
+        if nowPlaying == nil {
             timestamp = Date(timeIntervalSince1970: Double(unixTimestamp!)!)
         }
-    }
-    
-    func getFormattedTimestamp() -> String {
-        let dateFormatter = DateFormatter()
-        return dateFormatter.timeSince(from: timestamp! as NSDate)
     }
     
 }

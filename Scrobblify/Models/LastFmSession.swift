@@ -9,19 +9,19 @@
 import Foundation
 import ObjectMapper
 
-class LastFmSession: Mappable {
+class LastFmSession {
     
     var key: String?
     var username: String?
     var subscribers: Int?
+
+    init() {}
     
-    init() {
-        
-    }
+    required init?(map: Map) {}
     
-    required init?(map: Map) {
-        
-    }
+}
+
+extension LastFmSession: Mappable {
     
     func mapping(map: Map) {
         key <- map["session.key"]

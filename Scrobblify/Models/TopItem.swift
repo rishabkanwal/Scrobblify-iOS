@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class TopItem: Mappable {
+class TopItem {
     
     var mbid: String?
     var name: String?
@@ -18,9 +18,11 @@ class TopItem: Mappable {
     var imageUrlString: String?
     var imageUrl: URL?
     
-    required init?(map: Map) {
-        
-    }
+    required init?(map: Map) {}
+    
+}
+
+extension TopItem: Mappable {
     
     func mapping(map: Map) {
         mbid <- map["mbid"]
