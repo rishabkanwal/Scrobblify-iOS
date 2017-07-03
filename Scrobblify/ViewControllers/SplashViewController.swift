@@ -12,17 +12,14 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         AppState.shared.retrieveSessionData()
-        if (AppState.shared.lastFmSession!.key == nil) {
+        
+        if AppState.shared.lastFmSession!.key == nil {
             segueSplashToLogin()
         } else {
             segueSplashToTabBarController()
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func segueSplashToLogin() {

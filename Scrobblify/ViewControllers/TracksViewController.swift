@@ -17,8 +17,9 @@ class TracksViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "TracksToTopItemsSegue") {
+        if segue.identifier == "TracksToTopItemsSegue" {
             let topItemsViewController = segue.destination  as! TopItemsViewController
+            
             topItemsViewController.apiMethod = "user.getTopTracks"
             topItemsViewController.baseJsonObject = "toptracks"
             topItemsViewController.mainJsonObject = "track"

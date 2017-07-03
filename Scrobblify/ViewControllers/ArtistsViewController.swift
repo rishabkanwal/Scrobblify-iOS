@@ -17,8 +17,9 @@ class ArtistsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ArtistsToTopItemsSegue") {
+        if segue.identifier == "ArtistsToTopItemsSegue" {
             let topItemsViewController = segue.destination  as! TopItemsViewController
+            
             topItemsViewController.apiMethod = "user.getTopArtists"
             topItemsViewController.baseJsonObject = "topartists"
             topItemsViewController.mainJsonObject = "artist"

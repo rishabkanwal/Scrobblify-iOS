@@ -17,8 +17,9 @@ class AlbumsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "AlbumsToTopItemsSegue") {
+        if segue.identifier == "AlbumsToTopItemsSegue" {
             let topItemsViewController = segue.destination  as! TopItemsViewController
+            
             topItemsViewController.apiMethod = "user.getTopAlbums"
             topItemsViewController.baseJsonObject = "topalbums"
             topItemsViewController.mainJsonObject = "album"

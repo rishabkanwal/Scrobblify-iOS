@@ -17,41 +17,44 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         let username = usernameTextField.text
         let password = passwordTextField.text
-        self.usernameTextField.endEditing(true)
-        self.passwordTextField.endEditing(true)
-        if (username == "" || password == "") {
+        
+        usernameTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+        
+        if username == "" || password == "" {
             makeSnackbar(message: "Enter both fields")
         } else {
-            
             startSession(username: username!, password: password!)
         }
     }
     
-    private func segueToTabBarController() {
+    func segueToTabBarController() {
         DispatchQueue.main.async(execute: {
             self.performSegue(withIdentifier: "LoginToTabBarControllerSegue", sender: nil)
+            
             self.loginActivityIndicator.stopAnimating()
         })
     }
-
-    private func startSession(username: String, password: String) {
-        self.loginActivityIndicator.startAnimating()
-        AppState.shared.lastFmRequestManager.getSession(username: username, password: password, completionHandler: {
-            responseJsonString, error in
-            if !(error != nil) {
-                AppState.shared.lastFmSession = LastFmSession(JSONString: responseJsonString!)!
-                AppState.shared.saveSessionData()
-                self.segueToTabBarController()
-            } else {
+    
+    func startSession(username: String, password: String) {
+        loginActivityIndicator.startAnimating()
+        
+        AppState.shared.lastFmRequestManager.getSession(username: username, password: password, completionHandler: { responseJsonString, error in
+            guard error == nil else {
                 DispatchQueue.main.async(execute: {
                     makeSnackbar(message: "Check login credentials")
+                    
                     self.loginActivityIndicator.stopAnimating()
                 })
-
+                return
             }
             
+            AppState.shared.lastFmSession = LastFmSession(JSONString: responseJsonString!)
+            AppState.shared.saveSessionData()
+            
+            self.segueToTabBarController()
         })
     }
-    
+
 }
 
