@@ -42,7 +42,7 @@ class TopItemsViewController: UIViewController {
         updateTopItems(isRefresh: true)
     }
     
-    func refresh(_ sender: AnyObject){
+    @objc func refresh(_ sender: AnyObject){
         if topItems.count != 0 {
             updateTopItems(isRefresh: true)
         }

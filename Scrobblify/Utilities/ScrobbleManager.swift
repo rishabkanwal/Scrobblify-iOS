@@ -20,7 +20,7 @@ fileprivate struct NowPlaying {
 class ScrobbleManager {
     
     fileprivate let backgroundTask = BackgroundTask()
-    fileprivate let musicPlayer = MPMusicPlayerController.systemMusicPlayer()
+    fileprivate let musicPlayer = MPMusicPlayerController.systemMusicPlayer
     fileprivate let musicPlayerController = MPMusicPlayerController()
     
     fileprivate var currentNowPlaying: NowPlaying? = nil

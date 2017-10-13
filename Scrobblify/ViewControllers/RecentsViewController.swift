@@ -34,7 +34,7 @@ class RecentsViewController: UIViewController {
         
     }
     
-    func refresh(_ sender: AnyObject){
+    @objc func refresh(_ sender: AnyObject){
         if recentTracks.count != 0 {
             updateRecentTracks(isRefresh: true)
         }
