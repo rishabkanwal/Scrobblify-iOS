@@ -9,7 +9,7 @@ target 'Scrobblify' do
   pod 'Alamofire', '~> 4.5'
   pod 'CryptoSwift', '~> 0.7'
   pod 'Kingfisher', '~> 4.1'
-  pod 'ObjectMapper', '~> 3.0'
+  pod 'ObjectMapper', '~> 3.1.0'
   pod 'SwiftyJSON'
   pod 'TTGSnackbar'
 
