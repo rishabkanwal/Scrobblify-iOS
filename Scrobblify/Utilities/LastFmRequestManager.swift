@@ -12,10 +12,10 @@ import CryptoSwift
 
 class LastFmRequestManager{
     
-    fileprivate let baseUrl = configuration().lastFmBaseUrl
-    fileprivate let apiKey = configuration().apiKey
-    fileprivate let sharedSecret = configuration().sharedSecret
-    fileprivate let baseParameters: Parameters = ["api_key": configuration().apiKey]
+    fileprivate let baseUrl = Configuration().lastFmBaseUrl
+    fileprivate let apiKey = Configuration().apiKey
+    fileprivate let sharedSecret = Configuration().sharedSecret
+    fileprivate let baseParameters: Parameters = ["api_key": Configuration().apiKey]
     
     func getSession(username: String, password: String, completionHandler: @escaping (String?, Error?) -> ()) {
         var parameters = baseParameters
