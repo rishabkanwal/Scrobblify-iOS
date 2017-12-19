@@ -72,25 +72,25 @@ class TopItemsViewController: UIViewController {
                     return
                 }
                 
-                let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)
-                
-                self.totalTopItems = Int(responseJson[self.baseJsonObject!]["@attr"]["total"].string!)!
-                
-                for (_, valueJson) in responseJson[self.baseJsonObject!][self.mainJsonObject!] {
-                    self.topItems.append(TopItem(JSONString: valueJson.rawString()!)!)
-                }
-                
-                if self.topItems.count == self.totalTopItems {
-                    self.hideTableFooter()
-                } else {
-                    self.showTableFooter()
-                }
-                
-                DispatchQueue.main.async(execute: {
-                    self.refreshControl.endRefreshing()
+                if let responseJson = try? JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!) {
+                    self.totalTopItems = Int(responseJson[self.baseJsonObject!]["@attr"]["total"].string!)!
                     
-                    self.topItemsTableView.reloadData()
-                })
+                    for (_, valueJson) in responseJson[self.baseJsonObject!][self.mainJsonObject!] {
+                        self.topItems.append(TopItem(JSONString: valueJson.rawString()!)!)
+                    }
+                    
+                    if self.topItems.count == self.totalTopItems {
+                        self.hideTableFooter()
+                    } else {
+                        self.showTableFooter()
+                    }
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.refreshControl.endRefreshing()
+                        
+                        self.topItemsTableView.reloadData()
+                    })
+                }
             })
         }
     }
@@ -165,8 +165,6 @@ extension TopItemsViewController: UITableViewDelegate {
             if let imageUrl = currentTopItem.imageUrl {
                 topItemCell.artImageView.kf.setImage(with: ImageResource(downloadURL: imageUrl))
             }
-            
-            
         }
         return topItemCell
     }

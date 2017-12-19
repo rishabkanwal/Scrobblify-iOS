@@ -44,27 +44,28 @@ class MeViewController: UIViewController {
                 return
             }
             
-            let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!).rawString()
-            let user = User(JSONString: responseJson!)!
-            
-            DispatchQueue.main.async(execute: {
-                self.mainActivityIndicator.stopAnimating()
+            if let responseJson = try? JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!).rawString() {
+                let user = User(JSONString: responseJson!)!
                 
-                self.mainView.isHidden = false
-                self.usernameLabel.isHidden = false
-                self.overlayImageView.isHidden = false
-                self.pictureImageView.isHidden = false
-                self.refreshButton.isHidden = false
-                
-                self.usernameLabel.text = user.username
-                self.playsLabel.text = (user.getFormattedPlaycount()) + " total plays"
-                self.subscribersLabel.text = user.subscribers! + " subscribers"
-                self.joinDateLabel.text = "Joined " + user.getFormattedRegisterDate()
-                
-                if let imageUrl = user.imageUrl {
-                    self.pictureImageView.kf.setImage(with: ImageResource(downloadURL: imageUrl))
-                }
-            })
+                DispatchQueue.main.async(execute: {
+                    self.mainActivityIndicator.stopAnimating()
+                    
+                    self.mainView.isHidden = false
+                    self.usernameLabel.isHidden = false
+                    self.overlayImageView.isHidden = false
+                    self.pictureImageView.isHidden = false
+                    self.refreshButton.isHidden = false
+                    
+                    self.usernameLabel.text = user.username
+                    self.playsLabel.text = (user.getFormattedPlaycount()) + " total plays"
+                    self.subscribersLabel.text = user.subscribers! + " subscribers"
+                    self.joinDateLabel.text = "Joined " + user.getFormattedRegisterDate()
+                    
+                    if let imageUrl = user.imageUrl {
+                        self.pictureImageView.kf.setImage(with: ImageResource(downloadURL: imageUrl))
+                    }
+                })
+            }
         })
     }
     

@@ -39,7 +39,7 @@ class RecentsViewController: UIViewController {
             updateRecentTracks(isRefresh: true)
         }
     }
-
+    
     func setupRefreshControl(){
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(RecentsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
@@ -65,31 +65,31 @@ class RecentsViewController: UIViewController {
                     return
                 }
                 
-                let responseJson = JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!)
-                
-                self.totalTracks = Int(responseJson["recenttracks"]["@attr"]["total"].string!)!
-                
-                for (_, valueJson) in responseJson["recenttracks"]["track"] {
-                    let newRecentTrack = RecentTrack(JSONString: valueJson.rawString()!)!
+                if let responseJson = try? JSON(data: responseJsonString!.data(using: .utf8, allowLossyConversion: false)!) {
+                    self.totalTracks = Int(responseJson["recenttracks"]["@attr"]["total"].string!)!
                     
-                    if self.recentTracks.count > 0 && newRecentTrack.nowPlaying != nil {
-                        continue
-                    } else {
-                        self.recentTracks.append(newRecentTrack)
+                    for (_, valueJson) in responseJson["recenttracks"]["track"] {
+                        let newRecentTrack = RecentTrack(JSONString: valueJson.rawString()!)!
+                        
+                        if self.recentTracks.count > 0 && newRecentTrack.nowPlaying != nil {
+                            continue
+                        } else {
+                            self.recentTracks.append(newRecentTrack)
+                        }
                     }
-                }
-                
-                if self.recentTracks.count >= self.totalTracks {
-                    self.hideTableFooter()
-                } else {
-                    self.showTableFooter()
-                }
-                
-                DispatchQueue.main.async(execute: {
-                    self.refreshControl.endRefreshing()
                     
-                    self.recentsTableView.reloadData()
-                })
+                    if self.recentTracks.count >= self.totalTracks {
+                        self.hideTableFooter()
+                    } else {
+                        self.showTableFooter()
+                    }
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.refreshControl.endRefreshing()
+                        
+                        self.recentsTableView.reloadData()
+                    })
+                }
             })
         }
     }
