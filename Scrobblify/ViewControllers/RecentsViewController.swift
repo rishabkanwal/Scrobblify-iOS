@@ -27,8 +27,8 @@ class RecentsViewController: UIViewController {
         setupRefreshControl()
         updateRecentTracks(isRefresh: true)
         
-        showEnableScrobblingDialogIfNeeded()
-        showEnablePermissionsDialogIfNeeded()
+        //showEnableScrobblingDialogIfNeeded()
+        //showEnablePermissionsDialogIfNeeded()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showEnablePermissionsDialogIfNeeded), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         

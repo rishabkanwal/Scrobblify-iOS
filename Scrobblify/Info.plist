@@ -23,9 +23,7 @@
 	<key>NSAppleMusicUsageDescription</key>
 	<string>This allows scrobbling to last.fm</string>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-	</array>
+	<array/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
